@@ -1,0 +1,59 @@
+// vars
+$fonts: '../fonts/';
+$images: '../images/';
+
+// fonts
+$OpenSans: "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+$breakpoints: (
+	phone-xs: 375px,
+	phone: 768px,
+	tablet: 992px,
+	desktop: 1200px,
+	desktop_lg: 1400px,
+);
+
+// font settings
+$grid-gutter-width: 15px;
+$container-large-desktop: 1260px;
+
+$font-family-base: $OpenSans;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$font-size-h1: 48px;
+$font-size-h2: 36px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+
+$paragraph-spacing: 0 0 15px;
+
+$hover-opacity: 0.8;
+$time-animation: 0.3s;
+
+// colors
+$white: #fff;
+$black: #000;
+$gray: #AAA;
+$gray4: #CCC;
+$gray_text: #666;
+$gray_light: #EDEDED;
+$gray_dark: #1A1919;
+
+$dark: #14141E;
+
+$blue: #006EBD;
+$blue2: #0070BA;
+
+$green: #3AB449;
+
+$base-color: $black;
+$body-bg: $white;
+
+$link-color: $black;
+
+$btn-color: $black;
+$btn-border-radius-base: 0;
+$btn-font-size: 16px;
+$btn-line-height: 20px;
+$btn-font-weight: 400;
+$btn-min-width: 100px;

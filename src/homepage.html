@@ -1,0 +1,772 @@
+//= inc/_head.html
+
+<body class="homepage">
+	<div class="wrapper">
+		<div class="page">
+			//= inc/_header.html
+			<section class="hero">
+				<form action="" class="hero__inner">
+					<div class="hero__header">
+						<div class="hero__header__inner">
+							<h1 class="hero__header__title">Прокат<br>автомобилей</h1>
+							
+							<div class="hero__header__link">
+								<div class="select-wrapper">
+									<div class="select-wrapper__inner">
+										<label for="place" class="select__label">Место получения</label>
+										<select name="place" id="place">
+											<option></option>
+											<option>Option 1</option>
+											<option>Option 2</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ol class="hero__list">
+						<li class="hero__list__item"><div class="hero__list__text">Самые низкие цены</div></li>
+						<li class="hero__list__item"><div class="hero__list__text">Автомобили не старше 2 лет</div></li>
+						<li class="hero__list__item"><div class="hero__list__text">Платные дороги Австии Словакии и Чехии - уже в цене</div></li>
+						<li class="hero__list__item"><div class="hero__list__text">Возврат автомобиля в любой стране шенгена</div></li>
+					</ol>
+					<div class="search">
+						<div class="search__inner">
+							<div class="search__block search__block_daterange">
+								<div class="search__daterange">
+									<div class="search__daterange__wrapper">
+										<label for="from-date" class="search__daterange__label">С</label>
+										<input id="from-date" type="text" class="search__daterange__input" placeholder="С">
+										<span class="search__daterange__sep">—</span>
+										<label for="to-date" class="search__daterange__label">С</label>
+										<input id="to-date" type="text" class="search__daterange__input" placeholder="По">
+									</div>
+									<i data-feather="calendar"></i>
+								</div>
+							</div>
+							<div class="search__block search__block_class">
+								<div class="search__select-wrapper">
+									<label for="type" class="search__select__label">Класс авто</label>
+									<select name="type" id="type">
+										<option></option>
+										<option>Бизнес класс</option>
+										<option>Эконом</option>
+									</select>
+								</div>
+							</div>
+							<div class="search__block search__block_transmission">
+								<div class="search__select-wrapper">
+									<label for="transmission" class="search__select__label">Коробка передач</label>
+									<select name="transmission" id="transmission">
+										<option></option>
+										<option>Автомат</option>
+										<option>Механическая</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="search__block search__block_dop">
+								<div class="search__dop">
+									<div class="search__dop__inner">
+										<div class="search__dop__title">Доп. параметры</div>
+										<div class="search__select-wrapper">
+											<label for="mesta" class="search__select__label">Количество мест</label>
+											<i data-feather="users"></i>
+											<div class="search__select-wrapper__inner">
+												<select name="mesta" id="mesta">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="search__select-wrapper">
+											<i data-feather="zap"></i>
+											<label for="engine" class="search__select__label">Тип двигателя</label>
+											<div class="search__select-wrapper__inner">
+												<select name="engine" id="engine">
+													<option>Electric</option>
+													<option>Some other</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<i data-feather="chevron-down"></i>
+								</div>
+							</div>
+
+							<div class="search__block search__block_checkbox">
+								<div class="search__row">
+									<div class="search__column">
+										<div class="checkbox-input-wrapper">
+											<div class="checkbox-input-wrapper__inner">
+												<input id="on-sale" type="checkbox" class="checkbox-input">
+												<label for="on-sale" class="checkbox-input-label">Только акционные</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="search__column">
+										<div class="checkbox-input-wrapper">
+											<div class="checkbox-input-wrapper__inner">
+												<input id="age" type="checkbox" class="checkbox-input">
+												<label for="age" class="checkbox-input-label">Возраст водителя между 30 - 65</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="search__block search__block_submit">
+								<button type="submit" class="search__submit">Поиск</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<section class="container products">
+				<div class="row">
+					<div class="column-1">
+						<div class="search-results-header">
+							<div class="search-results-header__title">Найдено 35 Машин</div>
+							<form action="">
+								<div class="sorting">
+									<label for="sort" class="sorting__label">Цена:</label>
+									<select id="sort" class="sorting__select">
+										<option value="">меньше → больше</option>
+										<option value="">больше → меньше</option>
+									</select>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__event">Акция</div>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__event">Акция</div>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3-2 column-1-sm column-3-2-md">
+						<div class="product-slider">
+							<div class="product-slider__item">
+								<a href="#" class="product-slider__link">
+									<span class="product-slider__title">Mescedes Benz S600</span>
+									<img src="images/manufacturer/Mercedes.png" width="40" height="40" alt="" class="product-slider__manufacturer">
+									<img src="images/slider/slide-1.jpg" alt="" class="product-slider__image">
+								</a>
+							</div>
+
+							<div class="product-slider__item">
+								<a href="#" class="product-slider__link">
+									<span class="product-slider__title">Mescedes Benz S600</span>
+									<img src="images/manufacturer/Mercedes.png" width="40" height="40" alt="" class="product-slider__manufacturer">
+									<img src="images/slider/slide-1.jpg" alt="" class="product-slider__image">
+								</a>
+							</div>
+
+							<div class="product-slider__item">
+								<a href="#" class="product-slider__link">
+									<span class="product-slider__title">Mescedes Benz S600</span>
+									<img src="images/manufacturer/Mercedes.png" width="40" height="40" alt="" class="product-slider__manufacturer">
+									<img src="images/slider/slide-1.jpg" alt="" class="product-slider__image">
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__event">Акция</div>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__event">Акция</div>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3-2 column-1-sm column-3-2-md">
+						<div class="product-highlight">
+							<div class="product-highlight__inner">
+								<div class="product-highlight__price">$ 245 <sub class="product-highlight__price__sub">/ daily</sub></div>
+								<h3 class="product-highlight__title">Ford Mustang Shelby GT500 Eleanor</h3>
+								<a href="#" class="product-highlight__link">Подробней <i data-feather="chevron-right"></i></a>
+							</div>
+							<div class="product-highlight__image">
+								<img src="images/products/car-2.jpg" alt="" class="product-highlight__img">
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-1-sm column-3-md">
+						<div class="row">
+							<div class="column-3 column-2-sm column-1-md">
+								<div class="product">
+									<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+									<div class="product__header">
+										<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+									</div>
+									<div class="product__inner">
+										<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+										<h3 class="product__title">Mercedes Benz, G63</h3>
+										<div class="product__price">$ 100</div>
+									</div>
+									<div class="product__summary">
+										<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+										<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+										<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+										<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="column-3 column-2-sm column-1-md">
+								<div class="product">
+									<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+									<div class="product__header">
+										<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+									</div>
+									<div class="product__inner">
+										<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+										<h3 class="product__title">Mercedes Benz, G63</h3>
+										<div class="product__price">$ 100</div>
+									</div>
+									<div class="product__summary">
+										<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+										<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+										<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+										<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__event">Акция</div>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-2-sm column-3-md">
+						<div class="product">
+							<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
+							<div class="product__header">
+								<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+							</div>
+							<div class="product__inner">
+								<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
+								<h3 class="product__title">Mercedes Benz, G63</h3>
+								<div class="product__price">$ 100</div>
+							</div>
+							<div class="product__summary">
+								<div class="product__summary__item"><i data-feather="users"></i> 5</div>
+								<div class="product__summary__item"><img src="images/icons/auto.svg" alt="" class="product__summary__item__img"> Auto</div>
+								<div class="product__summary__item"><i data-feather="zap"></i> Electric</div>
+								<div class="product__summary__item"><i data-feather="briefcase"></i> 4</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column-1 show-more">
+						<button type="button" class="show-more__btn">Показать еще</button>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<div class="newsletter__inner">
+							<h3 class="newsletter__title">Подпишитесь на новости</h3>
+							<form id="subscribe" action="" class="newsletter__form">
+								<div class="newsletter__row">
+									<div class="newsletter__column-input">
+										<div class="newsletter__input-wrapper">
+											<div class="newsletter__input-wrapper__inner">
+												<label for="newsletter-email" class="newsletter__label">Введите ваш Email</label>
+												<input type="email" id="newsletter-email" name="newsletterEmail" class="newsletter__email" placeholder="Введите ваш Email" required>
+											</div>
+										</div>
+									</div>
+									<div class="newsletter__column-btn">
+										<button type="submit" class="newsletter__btn" aria-label="Отправить">
+											<i data-feather="arrow-right"></i>
+											<span class="newsletter__btn__text">Отправить</span>
+										</button>
+									</div>
+								</div>
+								<div class="newsletter__checkbox-wrapper">
+									<div class="newsletter__checkbox-wrapper__inner">
+									<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+									<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="seo">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<h2 class="seo__title">Search Engine Optimization</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column-2">
+						<div class="seo__left">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+					<div class="column-2">
+						<div class="seo__right">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		//= inc/_footer.html
+	</div><!-- / wrapper -->
+
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registerModalLabel">Регистрация</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="registration" action="">
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="reg-1" class="text-input-label">Имя</label>
+								<input type="text" name="regName" id="reg-1" class="text-input" placeholder="Имя" required>
+							</div>
+						</div>
+
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="reg-2" class="text-input-label">Email</label>
+								<input type="email" id="reg-2" name="regMail" class="text-input" placeholder="Email" required>
+							</div>
+						</div>
+
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="reg-3" class="text-input-label">Пароль</label>
+								<input type="password" id="reg-3" name="regPassword" class="text-input" placeholder="Пароль" required>
+								<button type="button" class="password-toggle"><i data-feather="eye"></i></button>
+							</div>
+						</div>
+
+						<div class="checkbox-input-wrapper">
+							<div class="checkbox-input-wrapper__inner">
+								<input type="checkbox" id="reg-4" name="regTerms" class="checkbox-input" required>
+								<label for="reg-4" class="checkbox-input-label">Я принимаю правила и условия сервиса</label>
+							</div>
+						</div>
+
+						<div class="submit-wrapper">
+							<button type="submit" class="submit-btn">Зарегистрироваться</button>
+						</div>
+					</form>
+
+					<div class="alt">
+						<div class="alt__title">
+							Зарегистрироваться с&nbsp;помощью
+						</div>
+						<ul class="alt__list">
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="facebook"></i>
+								</a>
+							</li>
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="youtube"></i>
+								</a>
+							</li>
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="reg-info">
+						Ваши регистрационные данные не будут распространяться третьим лицам без вашего согласия и будут использованы исключительно для связи с вами по вопросам предоставляемых сайтом услуг.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Вход</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="login" action="">
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="login-1" class="text-input-label">Email</label>
+								<input type="email" id="login-1" name="logMail" class="text-input" placeholder="Email" required>
+							</div>
+						</div>
+
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="login-2" class="text-input-label">Пароль</label>
+								<input type="password" id="login-2" name="logPassword" class="text-input" placeholder="Пароль" required>
+							</div>
+						</div>
+
+						<div class="submit-wrapper">
+							<button type="submit" class="submit-btn">Войти</button>
+						</div>
+					</form>
+
+					<div class="alt">
+						<div class="alt__title">
+								Войти с&nbsp;помощью
+						</div>
+						<ul class="alt__list">
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="facebook"></i>
+								</a>
+							</li>
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="youtube"></i>
+								</a>
+							</li>
+							<li class="alt__list__item">
+								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
+									<i data-feather="twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<ul class="login-list">
+						<li class="login-list__item"><a href="#" id="reg-link" class="login-list__link">Регистрация</a></li>
+						<li class="login-list__item"><a href="#" class="login-list__link">Забыли пароль?</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cookieModal">
+		cookie
+	</button>
+
+	<div class="modal fade modal_show-close" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="cookieModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="cookieModalLabel">Заголовок</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookie, которые обеспечивают правильную работу сайта.
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn">Да</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#signoutModal">sign out</button>
+
+	<div class="modal fade modal_show-close modal_signout" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="signoutModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="signoutModalLabel">Выйти</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Вы уверены что хотите выйти из личного кабинета?
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="cancel-btn" data-dismiss="modal">Нет</button>
+						</div>
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn">Да</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="btn btn-default">default</button>
+
+	//= inc/_scripts.html
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+/* buttons */
+.btn{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid transparent;
+	text-align: center;
+	border-radius: $btn-border-radius-base;
+	font-weight: $btn-font-weight;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	padding: 9px 30px;
+	color: $btn-color;
+	width: auto;
+	min-width: 100px;
+	transition: all .2s ease;
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		box-shadow: none;
+		outline: none;
+	}
+	&.w100{
+		width: 100%;
+	}
+}
+.btn-primary{
+	background: $blue2;
+	border: 1px solid $blue2;
+	color: $white;
+	font-size: 14px;
+	line-height: 20px;
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: lighten(desaturate($blue2, 13.10), 8.43);
+		border-color: lighten(desaturate($blue2, 13.10), 8.43);
+	}
+}
+.btn-default{
+	background: $white;
+	border: 1px solid $blue2;
+	color: $gray_dark;
+	font-size: 14px;
+	line-height: 20px;
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $blue2;
+		color: $white;
+		border-color: $blue2;
+	}
+}
+.btn-info{
+	background: $white;
+	border: 1px solid $white;
+	color: $gray_dark;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $gray_dark;
+		color: $white;
+		border-color: $gray_dark;
+	}
+}
+/*end btn*/
