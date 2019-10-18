@@ -41,6 +41,22 @@
 		border-color: lighten(desaturate($blue2, 13.10), 8.43);
 	}
 }
+.btn-white{
+	background: $white;
+	border: 1px solid $white;
+	color: $black;
+	font-size: 14px;
+	line-height: 20px;
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $gray_light;
+		color: $black;
+		border-color: $gray_light;
+	}
+}
 .btn-default{
 	background: $white;
 	border: 1px solid $blue2;
@@ -72,5 +88,9 @@
 		color: $white;
 		border-color: $gray_dark;
 	}
+}
+.btn-block{
+	width: 100%;
+	display: block;
 }
 /*end btn*/

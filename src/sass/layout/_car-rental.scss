@@ -1,0 +1,607 @@
+.form-group{
+	margin: 0 0 10px;
+}
+.form-control {
+	display: block;
+	width: 100%;
+	line-height: 38px;
+	font-size: 16px;
+	border: 1px solid $gray4;
+	padding: 0 15px;
+	border-radius: 0;
+	color: #000;
+	text-align: left;
+	-webkit-appearance: none;
+	box-shadow: none;
+
+	&::-moz-placeholder {
+		color: #999;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: #999;
+	}
+
+	::-webkit-input-placeholder {
+		color: #999;
+	}
+}
+textarea.form-control {
+	resize: vertical;
+	height: 121px;
+	max-height: 220px;
+}
+
+.car-rental {
+	padding: 42px 0 19px;
+
+	>.container {
+		position: relative;
+	}
+
+	.h2 {
+		text-align: left;
+		margin: 0 0 22px;
+	}
+
+	&__content {
+		padding: 0 15px;
+		width: 900px;
+	}
+
+	&__h3 {
+		margin-bottom: 30px;
+	}
+
+	&__info {
+		margin-bottom: 20px;
+	}
+}
+
+.car-slider {
+	margin-bottom: 53px;
+
+	&__slider {
+		margin-bottom: 4px;
+	}
+
+	&__wrap {
+		.img-to-bg {
+			height: 460px;
+		}
+	}
+
+	&__nav {
+		font-size: 0;
+		line-height: 0;
+		margin: 0 -5px;
+	}
+
+	&__nav-item {
+		padding: 0 5px;
+
+		.img-to-bg {
+			height: 130px;
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background: none;
+		border: none;
+		font-size: 0;
+		line-height: 0;
+		background-color: rgba(255, 255, 255, 0.77);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		padding: 0;
+		width: 171px;
+		z-index: 10;
+		cursor: pointer;
+
+		&.slick-disabled {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&.slick-prev {
+			left: 4px;
+			background-image: url(../images/icons/chevron-left.svg);
+		}
+
+		&.slick-next {
+			right: 0;
+			background-image: url(../images/icons/chevron-right.svg);
+		}
+	}
+}
+
+.characteristics-list {
+	margin: 0 -10px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 0 10px;
+		margin-bottom: 23px;
+	}
+
+	&__ico {
+		display: block;
+		height: 18px;
+		margin-bottom: 4px;
+	}
+
+	&__img {
+		vertical-align: top;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&__title {
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		color: $gray_text;
+		margin: 0 0 7px;
+	}
+
+	&__info {
+		display: block;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 700;
+	}
+}
+
+.table-rent-wrap {
+	margin: 0 -5px 26px;
+}
+
+.table-rent {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	&__th {
+		font-weight: 700;
+		padding: 0 5px 30px;
+	}
+
+	&__td {
+		color: $gray_text;
+		font-weight: 400;
+		padding: 4px 5px;
+	}
+}
+
+.optional-information {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		margin-bottom: 8px;
+	}
+}
+
+.car-description {
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 300;
+	padding: 0 0 20px;
+
+	&__h3 {
+		margin-bottom: 24px;
+	}
+
+	p {
+		margin: 0 0 25px;
+	}
+}
+
+.similar-cars {
+	padding: 0 0 12px;
+
+	&__h3 {
+		margin: 0 0 24px;
+	}
+}
+
+.rent-sidebar {
+	width: 300px;
+	position: absolute;
+	top: 11px;
+	right: 0;
+	padding: 0 15px;
+
+	&__h3 {
+		margin: 0 0 25px;
+	}
+
+	&__block {
+		box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.0708588);
+		border: 1px solid $gray4;
+		margin-bottom: 20px;
+	}
+
+	&__form {
+		padding: 11px 17px 7px;
+	}
+
+	&__price {
+		color: $blue;
+		font-size: 16px;
+		font-weight: 400;
+		display: block;
+		margin: 0 0 12px;
+	}
+
+	&__price-val {
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+	}
+
+	&__checkbox {
+		padding: 22px 17px 19px;
+		margin: 0;
+	}
+
+	&__footer {
+		padding: 0 17px 22px;
+	}
+}
+
+.range-date {
+	margin-bottom: 13px;
+
+	&__wrap {
+		margin-bottom: 10px;
+		position: relative;
+		padding: 0 0 0 30px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 16px;
+			right: 8px;
+			top: 11px;
+			pointer-events: none;
+			height: 16px;
+			background: url(../images/icons/calendar.svg) no-repeat 50% 50%;
+			background-size: 15px 15px;
+		}
+	}
+
+	&__prefix {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-weight: 700;
+		line-height: 40px;
+	}
+
+	&__input {
+		text-align: center;
+	}
+}
+
+.radio {
+	overflow: hidden;
+	margin: 0 0 5px;
+
+	&__input:checked,
+	&__input:not(:checked) {
+		position: absolute;
+		left: -9999px;
+	}
+
+	&__input:checked+label,
+	&__input:not(:checked)+label {
+		position: relative;
+		padding-left: 25px;
+		cursor: pointer;
+		line-height: 20px;
+		display: inline-block;
+		color: $gray_text;
+	}
+
+	&__input:checked+label:before,
+	&__input:not(:checked)+label:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 1px;
+		width: 17px;
+		height: 17px;
+		border: 1px solid $gray_text;
+		border-radius: 100%;
+		background: #fff;
+	}
+
+	&__input:checked+label:after,
+	&__input:not(:checked)+label:after {
+		content: '';
+		width: 11px;
+		height: 11px;
+		background: $blue;
+		position: absolute;
+		top: 4px;
+		left: 3px;
+		border-radius: 100%;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+
+	&__input:not(:checked)+label:after {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__input:checked+label:after {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// price-per-day
+.price-per-day {
+	border-top: 1px solid $gray4;
+	border-bottom: 1px solid $gray4;
+	padding: 12px 17px;
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+
+	&__range {
+		padding-right: 10px;
+	}
+}
+
+// additional-services
+.additional-services {
+	border-bottom: 1px solid $gray4;
+
+	&__toggle {
+		display: block;
+		padding: 15px 38px 15px 17px;
+		color: $blue;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: 12px;
+			width: 18px;
+			height: 18px;
+			background: url(../images/icons/chevron-down.svg) no-repeat 50% 50%;
+			background-size: 15px auto;
+		}
+	}
+}
+
+// total-price-rent
+.total-price-rent {
+	background: $gray_light;
+	padding: 13px 17px 14px;
+	color: $black;
+	border-bottom: 1px solid $gray4;
+
+	&__val {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 700;
+		line-height: 34px;
+
+		&._small {
+			color: $gray_text;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 400;
+		}
+	}
+
+	&__title {
+		padding-right: 10px;
+		position: relative;
+		top: 3px;
+	}
+
+	&__count {
+		font-size: 24px;
+	}
+
+	&__sub-right {
+		color: $black;
+	}
+}
+
+.checkbox-tooltip {
+	.checkbox-input-label {
+		line-height: 22px;
+		font-size: 16px;
+		color: $gray_text;
+	}
+
+	.checkbox-input-wrapper__inner {
+		padding-right: 30px;
+
+		.btn-tooltip {
+			position: absolute;
+			top: -5px;
+			right: -11px;
+		}
+	}
+}
+
+.checkbox-input-wrapper_top {
+	.checkbox-input-label {
+
+		&:after,
+		&:before {
+			top: 2px;
+			transform: none;
+		}
+	}
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 100;
+	display: block;
+	font-size: 12px;
+	line-height: 16px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s;
+
+	&.in {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.top {
+		padding: 5px 0;
+		margin-top: -3px;
+	}
+
+	&.right {
+		padding: 0 5px;
+		margin-left: 3px;
+	}
+
+	&.bottom {
+		padding: 5px 0;
+		margin-top: 3px;
+	}
+
+	&.left {
+		padding: 0 5px;
+		margin-left: -3px;
+	}
+
+	&.top .tooltip-arrow {
+		bottom: 0;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px 5px 0;
+		border-top-color: #000;
+	}
+
+	&.top-left .tooltip-arrow {
+		right: 5px;
+		bottom: 0;
+		margin-bottom: -5px;
+		border-width: 5px 5px 0;
+		border-top-color: #000;
+	}
+
+	&.top-right .tooltip-arrow {
+		bottom: 0;
+		left: 5px;
+		margin-bottom: -5px;
+		border-width: 5px 5px 0;
+		border-top-color: #000;
+	}
+
+	&.right .tooltip-arrow {
+		top: 50%;
+		left: 0;
+		margin-top: -5px;
+		border-width: 5px 5px 5px 0;
+		border-right-color: #000;
+	}
+
+	&.left .tooltip-arrow {
+		top: 50%;
+		right: 0;
+		margin-top: -5px;
+		border-width: 5px 0 5px 5px;
+		border-left-color: #000;
+	}
+
+	&.bottom .tooltip-arrow {
+		top: 0;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 0 5px 5px;
+		border-bottom-color: #000;
+	}
+
+	&.bottom-left .tooltip-arrow {
+		top: 0;
+		right: 5px;
+		margin-top: -5px;
+		border-width: 0 5px 5px;
+		border-bottom-color: #000;
+	}
+
+	&.bottom-right .tooltip-arrow {
+		top: 0;
+		left: 5px;
+		margin-top: -5px;
+		border-width: 0 5px 5px;
+		border-bottom-color: #000;
+	}
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+	max-width: 200px;
+	padding: 3px 8px;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+	border-radius: 4px;
+}
+
+// Arrows
+.tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+
+.btn-tooltip {
+	padding: 10px;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 33px;
+
+	>img {
+		width: 13px;
+		vertical-align: top;
+	}
+}
+
+.ask-a-question {
+	padding: 17px 17px 20px;
+	font-size: 12px;
+	line-height: 16px;
+	color: $gray_text;
+	&__h4 {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 0 12px;
+	}
+	.checkbox-input-wrapper{
+		margin: 18px 0 15px;
+	}
+	a{
+		color: #000;
+	}
+	.ask-a-question__text{margin: 0 0 20px;}
+}
