@@ -145,6 +145,14 @@ $(document).ready(function() {
 		infinite: false
 	});
 
+	//accordeon
+	$(".accordeon dd").hide().prev().click(function() {
+		$(".accordeon dl.current").removeClass("current");
+		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active").parents("dl").removeClass("active");
+		$(this).next().not(":visible").slideDown().prev().addClass("active").parents("dl").addClass("active");
+	});
+	$(".accordeon dl.current dd").show();
+
 	$('[data-toggle="tooltip"]').tooltip()
 });
 

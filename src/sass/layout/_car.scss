@@ -1,0 +1,185 @@
+.terms-page{
+	padding: 42px 0 42px;
+	.h1{
+		margin-bottom: 23px;
+	}
+}
+.accordeon{
+	counter-reset: list;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	dl{
+		margin: 0;
+		background-color: $white;
+		position: relative;
+		
+	}
+	dl + dl{
+		margin-top: 3px;
+		@include media("<phone"){
+			margin-top: 3px;
+		}
+	}
+	dt{
+		position: relative;
+		border-bottom: 1px solid #CCCCCC;
+		padding: 13px 10px 13px 45px;
+		margin: 0;
+		cursor: pointer;
+		background: $alto;
+		@include media("<phone"){
+			padding: 13px 10px 13px 35px;
+		}
+	}
+	dt:after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 18px;
+		transform: translate(0, -50%) rotate(0.01deg);
+		width: 14px;
+		height: 14px;
+		background: url(../images/arrow-acardeon.svg) no-repeat;
+		background-size: 100% auto;
+		transition: all 0.5s;
+		@include media("<phone"){
+			right: 14px;
+		}
+	}
+
+	.current{
+		
+		&:after{
+			color: $black;
+		}
+		dt{
+			background: $alto;
+			strong{
+				color: $black;
+			}
+			&:after{
+				background: url(../images/arrow-acardeon.svg) no-repeat;
+				background-size: 100% auto;
+				transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
+			}
+		}
+		
+	}
+	dt.active strong{
+		color: $black;
+	}
+	dl.active:after{
+		color: $black;
+	}
+	dl.active{
+		
+	}
+	dt.active:after{
+		background: url(../images/arrow-acardeon.svg) no-repeat;
+		background-size: 100% auto;
+		transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
+	}
+	dt span{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	dt .ico{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+		width: 32px;
+		height: 32px;
+		margin: 0 8px 0 0;
+	}
+	dt strong{
+		display: flex;
+		align-items: flex-start;
+		position: relative;
+		font-size: 17px;
+		line-height: 20px;
+		font-weight: bold;
+		margin-left: 12px;
+		margin-bottom: 0;
+		@include media("<phone"){
+			font-size: 15px;
+		}
+		&:before{
+			counter-increment: list;
+			content: counter(list) ".";
+			display: inline-block;
+			vertical-align: top;
+			font-size: 17px;
+			font-weight: bold;
+			margin-right: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $black;
+			@include media("<phone"){
+				font-size: 15px;
+			}
+		}
+	}
+	dd{
+		position: relative;
+		margin: -1px 0 0;
+		padding: 11px 5px 20px 10px;
+		font-size: 17px;
+		line-height: 25px;
+		color: $black;
+		font-weight: 300;
+		font-style: normal;
+		@include media("<phone"){
+			font-size: 17px;
+			line-height: 20px;
+			padding: 11px 5px 11px 10px;
+		}
+	}
+	dd p{
+		margin: 0 0 30px;
+		@include media("<phone"){
+			margin: 0 0 16px;
+		}
+	}
+	dd p:last-child{
+		margin: 0;
+	}
+	dd .content{
+		&__list{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			counter-reset: list;
+			li{
+				position: relative;
+				margin-bottom: 25px;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 25px;
+				@include media("<phone"){
+					font-size: 15px;
+					margin-bottom: 15px;
+				}
+				&:before{
+					counter-increment: list;
+  					content: counters(list, ".") "";
+					display: inline-block;
+					vertical-align: top;
+					font-size: 17px;
+					font-weight: bold;
+					margin-right: 5px;
+					color: $black;
+					@include media("<phone"){
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
