@@ -169,7 +169,7 @@ COMMON
 	cursor: pointer;
 }
 
-.checkbox-input:checked + .checkbox-input-label::after {
+.checkbox-input:checked ~ .checkbox-input-label::after {
 	opacity: 1;
 }
 
@@ -1649,7 +1649,7 @@ NEWSLETTER
 	cursor: pointer;
 }
 
-.newsletter__checkbox-input:checked + .newsletter__checkbox-label::after {
+.newsletter__checkbox-input:checked ~ .newsletter__checkbox-label::after {
 	opacity: 1;
 }
 
@@ -2299,7 +2299,7 @@ SEARCH
 	right: 0;
 }
 
-.search .checkbox-input:checked + .checkbox-input-label {
+.search .checkbox-input:checked ~ .checkbox-input-label {
 	color: #0070BA;
 }
 
