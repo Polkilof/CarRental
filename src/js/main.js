@@ -146,6 +146,32 @@ $(document).ready(function() {
 	});
 
 	$('[data-toggle="tooltip"]').tooltip()
+
+	$('.ask-a-question form').validate({
+		errorClass: "error",
+		validClass: "valid",
+		highlight: function(element) {
+			$(element).parent().addClass('error').removeClass('valid');
+		},
+		unhighlight: function(element) {
+			$(element).parent().removeClass('error').addClass('valid');
+		},
+		rules: {
+			full_name: {
+				required: true
+			},
+			phone: {
+				required: true,
+				number: true
+			},
+			message: {
+				required: true
+			},
+			ask_checkbox: {
+				required: true
+			}
+		}
+	});
 });
 
 var $document = $(window),
@@ -287,5 +313,19 @@ if ($('#login').length > 0) {
 	});
 }
 
+$(window).on('load resize', function() {
+	var $gallery = $('.similar-cars__slider');
+	if ($(window).width() < 767 && !$gallery.is('.slick-initialized')) {
+		$gallery.slick({
+			arrows: true,
+			dots: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false,
+		});
+	} else if ($(window).width() > 768 && $gallery.is('.slick-initialized')) {
+		$gallery.slick('unslick');
+	}
+});
 
 feather.replace();

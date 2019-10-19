@@ -7,7 +7,7 @@
 			<main class="car-rental">
 				<div class="container">
 					<div class="row">
-						<section class="car-rental__content">
+						<section class="car-rental__content col-xl-9">
 							<h1 class="h2">Mercedes E-Class</h1>
 							<div class="car-slider">
 								<div class="car-slider__slider">
@@ -77,59 +77,59 @@
 							</div><!-- / car-slider -->
 							<div class="car-rental__info">
 								<div class="row">
-									<div class="col-md-5">
+									<div class="col-xl-5 col-lg-6">
 										<h3 class="h3 car-rental__h3">Характеристики</h3>
 										<ul class="characteristics-list">
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/calendar.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Год выпуска</span>
 												<span class="characteristics-list__info">2019</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/settings.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Тип двигателя</span>
 												<span class="characteristics-list__info">Дизель</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/clipboard.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Класс авто</span>
 												<span class="characteristics-list__info">Эконом</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/transmission.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Коробка передач</span>
 												<span class="characteristics-list__info">Ручная</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/disc.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Тип привода</span>
 												<span class="characteristics-list__info">Передний</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/baggage.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Количество багажа</span>
 												<span class="characteristics-list__info">3</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/door.svg" alt="image description" class="characteristics-list__img">
 												</span>
 												<span class="characteristics-list__title">Количество дверей</span>
 												<span class="characteristics-list__info">6</span>
 											</li>
-											<li class="characteristics-list__item">
+											<li class="characteristics-list__item col-6">
 												<span class="characteristics-list__ico">
 													<img src="images/icons/people.svg" alt="image description" class="characteristics-list__img">
 												</span>
@@ -138,7 +138,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="col-md-7">
+									<div class="col-xl-7 col-lg-6">
 										<h3 class="h3 car-rental__h3">Стоимость аренды в день *</h3>
 										<div class="table-rent-wrap">
 											<table class="table-rent">
@@ -187,80 +187,162 @@
 									</div>
 									<div class="rent-sidebar">
 										<h3 class="h3 rent-sidebar__h3">Арендовать авто</h3>
-										<div class="rent-sidebar__block">
-											<form action="#">
-												<div class="rent-sidebar__form">
-													<strong class="rent-sidebar__price"><span class="rent-sidebar__price-val">€50</span>/сутки</strong>
-													<div class="range-date">
-														<div class="range-date__wrap">
-															<label for="from-date" class="range-date__prefix">c</label>
-															<input id="from-date" type="text" class="range-date__input form-control" placeholder="22.08.19">
+										<div class="row">
+											<div class="col-xl-12 col-lg-6">
+												<div class="rent-sidebar__block">
+													<form action="#">
+														<div class="rent-sidebar__form">
+															<strong class="rent-sidebar__price"><span class="rent-sidebar__price-val">€50</span>/сутки</strong>
+															<div class="range-date">
+																<div class="range-date__wrap">
+																	<label for="from-date" class="range-date__prefix">c</label>
+																	<input id="from-date" type="text" class="range-date__input form-control" placeholder="22.08.19">
+																</div>
+																<div class="range-date__wrap">
+																	<label for="to-date" class="range-date__prefix">по</label>
+																	<input id="to-date" type="text" class="range-date__input form-control" placeholder="24.08.19">
+																</div>
+															</div><!-- / range-date -->
+															<div class="radio">
+																<input type="radio" name="radio-1" class="radio__input" id="radio-1">
+																<label for="radio-1">До 200 км/день</label>
+															</div><!-- / radio -->
+															<div class="radio">
+																<input type="radio" name="radio-1" class="radio__input" id="radio-2">
+																<label for="radio-2">Без ограничений пробега</label>
+															</div><!-- / radio -->
 														</div>
-														<div class="range-date__wrap">
-															<label for="to-date" class="range-date__prefix">по</label>
-															<input id="to-date" type="text" class="range-date__input form-control" placeholder="24.08.19">
+														<div class="price-per-day">
+															<span class="price-per-day__range">€50 x 2 суток</span>
+															<span class="price-per-day__total">€100</span>
+														</div><!-- / price-per-day -->
+														<div class="additional-services">
+															<a href="#additional-services-drop" data-toggle="collapse" class="additional-services__toggle">Дополнительные услуги</a>
+															<div class="collapse" id="additional-services-drop">
+																<div class="additional-services__wrap">
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-1" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-1" class="checkbox-input-label">Бустер</label>
+																			<label for="additional-1" class="checkbox-input-val">€100</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-2" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-2" class="checkbox-input-label">Багажник на крыше</label>
+																			<label for="additional-2" class="checkbox-input-val">€20</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-3" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-3" class="checkbox-input-label">Крепление для лыж</label>
+																			<label for="additional-3" class="checkbox-input-val">€20</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-4" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-4" class="checkbox-input-label">Крепление для велосипеда</label>
+																			<label for="additional-4" class="checkbox-input-val">€20</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-5" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-5" class="checkbox-input-label">Интернет в авто</label>
+																			<label for="additional-5" class="checkbox-input-val">€10</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-6" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-6" class="checkbox-input-label">Детское кресло</label>
+																			<label for="additional-6" class="checkbox-input-val">€100</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-7" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-7" class="checkbox-input-label">Цепи</label>
+																			<label for="additional-7" class="checkbox-input-val">€20</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-8" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-8" class="checkbox-input-label">Автохолодильник</label>
+																			<label for="additional-8" class="checkbox-input-val">€30</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-9" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-9" class="checkbox-input-label">Второй шофер</label>
+																			<label for="additional-9" class="checkbox-input-val">€30</label>
+																		</div>
+																	</div>
+																	<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																		<div class="checkbox-input-wrapper__inner">
+																			<input id="additional-10" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																			<label for="additional-10" class="checkbox-input-label">Инвертер 220 вольт</label>
+																			<label for="additional-10" class="checkbox-input-val">€30</label>
+																		</div>
+																	</div>
+																	<p class="additional-services__sub">* - стоимость включая НДС. Словацкая и Австрийская виньетки включены в стоимость.</p>
+																</div>
+															</div>
+														</div><!-- / additional-services -->
+														<div class="total-price-rent">
+															<div class="total-price-rent__val">
+																<span class="total-price-rent__title">Итого</span>
+																<span class="total-price-rent__count">€220</span>
+															</div>
+															<div class="total-price-rent__val _small">
+																<span class="total-price-rent__sub-left">в том числе НДС:</span>
+																<span class="total-price-rent__sub-right">€20</span>
+															</div>
+														</div><!-- / total-price-rent -->
+														<div class="checkbox-input-wrapper checkbox-input-wrapper_top rent-sidebar__checkbox checkbox-tooltip">
+															<div class="checkbox-input-wrapper__inner">
+																<input id="chk-driver-1" type="checkbox" class="checkbox-input">
+																<label for="chk-driver-1" class="checkbox-input-label">Возраст водителя между 30 - 65</label>
+																<span class="btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><img src="images/icons/info.svg" alt="image description"></span>
+															</div>
 														</div>
-													</div><!-- / range-date -->
-													<div class="radio">
-														<input type="radio" name="radio-1" class="radio__input" id="radio-1">
-														<label for="radio-1">До 200 км/день</label>
-													</div><!-- / radio -->
-													<div class="radio">
-														<input type="radio" name="radio-1" class="radio__input" id="radio-2">
-														<label for="radio-2">Без ограничений пробега</label>
-													</div><!-- / radio -->
+														<footer class="rent-sidebar__footer">
+															<button class="btn btn-primary btn-block" type="submit">Забронировать</button>
+														</footer>
+													</form>
 												</div>
-												<div class="price-per-day">
-													<span class="price-per-day__range  ">€50 x 2 суток</span>
-													<span class="price-per-day__total">€100</span>
-												</div><!-- / price-per-day -->
-												<div class="additional-services">
-													<a href="#" class="additional-services__toggle">Дополнительные услуги</a>
-												</div><!-- / additional-services -->
-												<div class="total-price-rent">
-													<div class="total-price-rent__val">
-														<span class="total-price-rent__title">Итого</span>
-														<span class="total-price-rent__count">€220</span>
-													</div>
-													<div class="total-price-rent__val _small">
-														<span class="total-price-rent__sub-left">в том числе НДС:</span>
-														<span class="total-price-rent__sub-right">€20</span>
-													</div>
-												</div><!-- / total-price-rent -->
-												<div class="checkbox-input-wrapper checkbox-input-wrapper_top rent-sidebar__checkbox checkbox-tooltip">
-													<div class="checkbox-input-wrapper__inner">
-														<input id="chk-driver-1" type="checkbox" class="checkbox-input">
-														<label for="chk-driver-1" class="checkbox-input-label">Возраст водителя между 30 - 65</label>
-														<span class="btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><img src="images/icons/info.svg" alt="image description"></span>
+											</div>
+											<div class="col-xl-12 col-lg-6">
+												<div class="rent-sidebar__block">
+													<div class="ask-a-question">
+														<form action="#">
+															<h4 class="h4 ask-a-question__h4">Задайте вопрос</h4>
+															<div class="form-group">
+																<input type="text" class="form-control" name="full_name" placeholder="Ваше имя:">
+															</div>
+															<div class="form-group">
+																<input type="tel" class="form-control" name="phone" placeholder="Телефон:">
+															</div>
+															<div class="form-group">
+																<textarea cols="30" rows="10" class="form-control" name="message" placeholder="Сообщение:"></textarea>
+															</div>
+															<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+																<div class="checkbox-input-wrapper__inner">
+																	<input id="ask-1" name="ask_checkbox" type="checkbox" class="checkbox-input">
+																	<label for="ask-1" class="checkbox-input-label">Согласен с условиями обработки персональных данных</label>
+																</div>
+															</div>
+															<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+															<p class="ask-a-question__text">This site is protected by reCAPTCHA and the <a href="#">Google Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+															<button class="btn btn-white btn-block" type="submit" data-toggle="modal" data-target="#form-modal">Отправить</button>
+														</form>
 													</div>
 												</div>
-												<footer class="rent-sidebar__footer">
-													<button class="btn btn-primary btn-block" type="submit">Забронировать</button>
-												</footer>
-											</form>
-										</div>
-										<div class="rent-sidebar__block">
-											<div class="ask-a-question">
-												<form action="#">
-													<h4 class="h4 ask-a-question__h4">Задайте вопрос</h3>
-													<div class="form-group">
-														<input type="text" class="form-control" placeholder="Ваше имя:">
-													</div>
-													<div class="form-group">
-														<input type="phone" class="form-control" placeholder="Телефон:">
-													</div>
-													<div class="form-group">
-														<textarea cols="30" rows="10" class="form-control" placeholder="Сообщение:"></textarea>
-													</div>
-													<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
-														<div class="checkbox-input-wrapper__inner">
-															<input id="ask-1" type="checkbox" class="checkbox-input">
-															<label for="ask-1" class="checkbox-input-label">Согласен с условиями обработки персональных данных</label>
-														</div>
-													</div>
-													<p class="ask-a-question__text">This site is protected by reCAPTCHA and the <a href="#">Google Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
-													<button class="btn btn-white btn-block" type="submit">Отправить</button>
-												</form>
 											</div>
 										</div>
 									</div><!-- / rent-sidebar -->
@@ -273,7 +355,7 @@
 							</div><!-- / car-description -->
 							<div class="similar-cars">
 								<h3 class="similar-cars__h3">Похожие авто</h3>
-								<div class="row">
+								<div class="row similar-cars__slider">
 									<div class="col-md-6">
 										<div class="product">
 											<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
@@ -348,7 +430,7 @@
 					<div class="column-1">
 						<div class="newsletter__inner">
 							<h3 class="newsletter__title">Подпишитесь на новости</h3>
-							<form id="subscribe" action="" class="newsletter__form">
+							<form id="subscribe" action="#" class="newsletter__form">
 								<div class="newsletter__row">
 									<div class="newsletter__column-input">
 										<div class="newsletter__input-wrapper">
@@ -379,6 +461,34 @@
 		</section>
 		//= inc/_footer.html
 	</div><!-- / wrapper -->
+	<div class="modal fade modal_show-close" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="form-modal-label" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="form-modal-label">Выйти</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Cообщение успешно отправлено
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn" data-dismiss="modal">Закрыть</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key" async defer></script>
+	<script>
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'homepage' }).then(function(token) {});
+	});
+	</script>
 	//= inc/_scripts.html
 </body>
 

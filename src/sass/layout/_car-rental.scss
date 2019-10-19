@@ -1,6 +1,25 @@
-.form-group{
+.form-group {
 	margin: 0 0 10px;
 }
+
+.error {
+	.form-control {
+		border-color: $error_color;
+	}
+}
+
+.checkbox-input-wrapper__inner {
+	&.error {
+		.error {
+			display: none !important;
+		}
+
+		.checkbox-input-label:before {
+			border-color: $error_color;
+		}
+	}
+}
+
 .form-control {
 	display: block;
 	width: 100%;
@@ -13,20 +32,18 @@
 	text-align: left;
 	-webkit-appearance: none;
 	box-shadow: none;
-
 	&::-moz-placeholder {
 		color: #999;
 		opacity: 1;
 	}
-
 	&:-ms-input-placeholder {
 		color: #999;
 	}
-
 	::-webkit-input-placeholder {
 		color: #999;
 	}
 }
+
 textarea.form-control {
 	resize: vertical;
 	height: 121px;
@@ -35,54 +52,79 @@ textarea.form-control {
 
 .car-rental {
 	padding: 42px 0 19px;
-
+	@include media("<phone") {
+		padding: 31px 0 0;
+	}
+	.product-slider{
+		font-size: 0;
+		line-height: 0;
+		@include media("<phone") {
+			margin: 0 0 20px;
+		}
+	}
 	>.container {
 		position: relative;
 	}
-
 	.h2 {
 		text-align: left;
 		margin: 0 0 22px;
+		@include media("<phone-xs") {
+			font-size: 30px;
+			line-height: 36px;
+		}
 	}
-
 	&__content {
 		padding: 0 15px;
-		width: 900px;
 	}
-
 	&__h3 {
 		margin-bottom: 30px;
+		@include media("<phone") {
+			margin-bottom: 23px;
+		}
 	}
-
 	&__info {
 		margin-bottom: 20px;
+		.row {
+			.rent-sidebar {
+				@include media("<desktop") {
+					order: 3;
+				}
+				@include media("<tablet") {
+					order: 0;
+				}
+			}
+		}
 	}
 }
 
 .car-slider {
 	margin-bottom: 53px;
-
+	@include media("<phone") {
+		margin-bottom: 26px;
+	}
 	&__slider {
 		margin-bottom: 4px;
 	}
-
 	&__wrap {
 		.img-to-bg {
-			height: 460px;
+			padding-top: 52.875%;
+			@include media("<phone") {
+				padding-top: 93%;
+			}
 		}
 	}
-
 	&__nav {
 		font-size: 0;
 		line-height: 0;
 		margin: 0 -5px;
+		@include media("<phone") {
+			display: none;
+		}
 	}
-
 	&__nav-item {
 		padding: 0 5px;
-
 		.img-to-bg {
-			height: 130px;
+			padding-top: 78.32%;
 		}
 	}
 
@@ -101,17 +143,20 @@ textarea.form-control {
 		width: 171px;
 		z-index: 10;
 		cursor: pointer;
-
+		@include media("<desktop"){
+			width: 183px;
+		}
+		@include media("<tablet"){
+			width: 136px;
+		}
 		&.slick-disabled {
 			opacity: 0;
 			visibility: hidden;
 		}
-
 		&.slick-prev {
 			left: 4px;
 			background-image: url(../images/icons/chevron-left.svg);
 		}
-
 		&.slick-next {
 			right: 0;
 			background-image: url(../images/icons/chevron-right.svg);
@@ -125,26 +170,23 @@ textarea.form-control {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-
 	&__item {
-		flex: 0 0 50%;
-		max-width: 50%;
 		padding: 0 10px;
 		margin-bottom: 23px;
+		@include media("<phone") {
+			margin-bottom: 25px;
+		}
 	}
-
 	&__ico {
 		display: block;
 		height: 18px;
 		margin-bottom: 4px;
 	}
-
 	&__img {
 		vertical-align: top;
 		max-width: 100%;
 		max-height: 100%;
 	}
-
 	&__title {
 		display: block;
 		font-size: 14px;
@@ -152,7 +194,6 @@ textarea.form-control {
 		color: $gray_text;
 		margin: 0 0 7px;
 	}
-
 	&__info {
 		display: block;
 		font-size: 16px;
@@ -163,22 +204,39 @@ textarea.form-control {
 
 .table-rent-wrap {
 	margin: 0 -5px 26px;
+	@include media("<phone") {
+		padding: 6px 0 0;
+		margin-bottom: 21px;
+	}
 }
 
 .table-rent {
 	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-
 	&__th {
 		font-weight: 700;
 		padding: 0 5px 30px;
+		@include media("<phone") {
+			font-size: 14px;
+			line-height: 19px;
+			width: 30%;
+			padding-bottom: 16px;
+			&:last-child{
+				width: 40%;
+			}
+		}
 	}
-
 	&__td {
 		color: $gray_text;
 		font-weight: 400;
 		padding: 4px 5px;
+		@include media("<phone") {
+			width: 30%;
+			&:last-child{
+				width: 40%;
+			}
+		}
 	}
 }
 
@@ -186,7 +244,6 @@ textarea.form-control {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-
 	&__item {
 		margin-bottom: 8px;
 	}
@@ -197,11 +254,9 @@ textarea.form-control {
 	line-height: 25px;
 	font-weight: 300;
 	padding: 0 0 20px;
-
 	&__h3 {
 		margin-bottom: 24px;
 	}
-
 	p {
 		margin: 0 0 25px;
 	}
@@ -209,9 +264,44 @@ textarea.form-control {
 
 .similar-cars {
 	padding: 0 0 12px;
-
+	@include media("<phone") {
+		padding-bottom: 0;
+		.product{
+			margin-bottom: 22px;
+		}
+	}
+	.slick-arrow{
+		display: none !important;
+		@include media("<phone") {
+			display: block !important;
+			font-size: 0;
+			line-height: 0;
+			border: none;
+			padding: 0;
+			background-color: $white;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			width: 38px;
+			height: 60px;
+			z-index: 10;
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+		}
+	}
+	.slick-prev{
+		left: 0;
+		background-image: url(../images/icons/chevron-left.svg);
+	}
+	.slick-next{
+		right: 0;
+		background-image: url(../images/icons/chevron-right.svg);
+	}
 	&__h3 {
 		margin: 0 0 24px;
+		@include media("<phone") {
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -219,23 +309,42 @@ textarea.form-control {
 	width: 300px;
 	position: absolute;
 	top: 11px;
-	right: 0;
+	right: -300px;
 	padding: 0 15px;
-
+	@include media("<desktop") {
+		position: static;
+		width: auto;
+		max-width: 100%;
+		flex: 0 0 100%;
+		padding-top: 15px;
+	}
+	&_order{
+		position: static;
+		padding: 0 29px 0 0;
+		@include media("<desktop") {
+			padding-right: 0;
+		}
+		.range-date{
+			margin: 0;
+		}
+		.rent-sidebar__price{
+			margin-bottom: 2px;
+		}
+		.total-price-rent__val._small{
+			margin: 0;
+		}
+	}
 	&__h3 {
 		margin: 0 0 25px;
 	}
-
 	&__block {
 		box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.0708588);
 		border: 1px solid $gray4;
 		margin-bottom: 20px;
 	}
-
 	&__form {
 		padding: 11px 17px 7px;
 	}
-
 	&__price {
 		color: $blue;
 		font-size: 16px;
@@ -243,18 +352,15 @@ textarea.form-control {
 		display: block;
 		margin: 0 0 12px;
 	}
-
 	&__price-val {
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 700;
 	}
-
 	&__checkbox {
 		padding: 22px 17px 19px;
 		margin: 0;
 	}
-
 	&__footer {
 		padding: 0 17px 22px;
 	}
@@ -262,12 +368,10 @@ textarea.form-control {
 
 .range-date {
 	margin-bottom: 13px;
-
 	&__wrap {
 		margin-bottom: 10px;
 		position: relative;
 		padding: 0 0 0 30px;
-
 		&:before {
 			content: '';
 			position: absolute;
@@ -280,7 +384,6 @@ textarea.form-control {
 			background-size: 15px 15px;
 		}
 	}
-
 	&__prefix {
 		position: absolute;
 		top: 0;
@@ -288,22 +391,28 @@ textarea.form-control {
 		font-weight: 700;
 		line-height: 40px;
 	}
-
 	&__input {
 		text-align: center;
+	}
+	&__result{
+		margin: 0 0 -4px;
+		position: relative;
+		line-height: 40px;
+		font-size: 16px;
+		font-weight: 700;
+		display: flex;
+		justify-content: flex-end;
 	}
 }
 
 .radio {
 	overflow: hidden;
 	margin: 0 0 5px;
-
 	&__input:checked,
 	&__input:not(:checked) {
 		position: absolute;
 		left: -9999px;
 	}
-
 	&__input:checked+label,
 	&__input:not(:checked)+label {
 		position: relative;
@@ -313,7 +422,6 @@ textarea.form-control {
 		display: inline-block;
 		color: $gray_text;
 	}
-
 	&__input:checked+label:before,
 	&__input:not(:checked)+label:before {
 		content: '';
@@ -326,7 +434,6 @@ textarea.form-control {
 		border-radius: 100%;
 		background: #fff;
 	}
-
 	&__input:checked+label:after,
 	&__input:not(:checked)+label:after {
 		content: '';
@@ -340,12 +447,10 @@ textarea.form-control {
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
 	}
-
 	&__input:not(:checked)+label:after {
 		opacity: 0;
 		visibility: hidden;
 	}
-
 	&__input:checked+label:after {
 		opacity: 1;
 		visibility: visible;
@@ -360,22 +465,23 @@ textarea.form-control {
 	font-weight: 700;
 	display: flex;
 	justify-content: space-between;
-
 	&__range {
 		padding-right: 10px;
+	}
+	&__total {
+		width: 50px;
+		text-align: right;
 	}
 }
 
 // additional-services
 .additional-services {
 	border-bottom: 1px solid $gray4;
-
 	&__toggle {
 		display: block;
 		padding: 15px 38px 15px 17px;
 		color: $blue;
 		position: relative;
-
 		&:after {
 			content: '';
 			position: absolute;
@@ -387,41 +493,71 @@ textarea.form-control {
 			background-size: 15px auto;
 		}
 	}
+	&__wrap {
+		padding: 2px 17px;
+	}
+	&__sub{
+		font-size: 14px;
+		line-height: 19px;
+		margin: 22px 0 12px;
+	}
+	.checkbox-input-label {
+		font-size: 16px;
+		padding-left: 22px;
+		padding-right: 5px;
+	}
+	.checkbox-input-wrapper {
+		margin-bottom: 14px;
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.checkbox-input-val {
+		width: 50px;
+		text-align: right;
+	}
 }
 
 // total-price-rent
 .total-price-rent {
 	background: $gray_light;
-	padding: 13px 17px 14px;
+	padding: 18px 17px 8px;
 	color: $black;
 	border-bottom: 1px solid $gray4;
-
 	&__val {
 		display: flex;
 		justify-content: space-between;
 		font-weight: 700;
-		line-height: 34px;
-
+		line-height: 22px;
+		margin: 0 0 6px;
 		&._small {
 			color: $gray_text;
 			font-size: 14px;
 			line-height: 20px;
 			font-weight: 400;
 		}
+		&._footer{
+			padding: 23px 0 6px;
+		}
 	}
-
 	&__title {
 		padding-right: 10px;
 		position: relative;
 		top: 3px;
 	}
-
 	&__count {
 		font-size: 24px;
+		width: 84px;
+		text-align: right;
 	}
-
+	&__sub-left {
+		max-width: 70%;
+	}
 	&__sub-right {
 		color: $black;
+		text-align: right;
+		width: 44px;
 	}
 }
 
@@ -431,10 +567,8 @@ textarea.form-control {
 		font-size: 16px;
 		color: $gray_text;
 	}
-
 	.checkbox-input-wrapper__inner {
 		padding-right: 30px;
-
 		.btn-tooltip {
 			position: absolute;
 			top: -5px;
@@ -445,7 +579,6 @@ textarea.form-control {
 
 .checkbox-input-wrapper_top {
 	.checkbox-input-label {
-
 		&:after,
 		&:before {
 			top: 2px;
@@ -463,32 +596,26 @@ textarea.form-control {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity .3s, visibility .3s;
-
 	&.in {
 		opacity: 1;
 		visibility: visible;
 	}
-
 	&.top {
 		padding: 5px 0;
 		margin-top: -3px;
 	}
-
 	&.right {
 		padding: 0 5px;
 		margin-left: 3px;
 	}
-
 	&.bottom {
 		padding: 5px 0;
 		margin-top: 3px;
 	}
-
 	&.left {
 		padding: 0 5px;
 		margin-left: -3px;
 	}
-
 	&.top .tooltip-arrow {
 		bottom: 0;
 		left: 50%;
@@ -496,7 +623,6 @@ textarea.form-control {
 		border-width: 5px 5px 0;
 		border-top-color: #000;
 	}
-
 	&.top-left .tooltip-arrow {
 		right: 5px;
 		bottom: 0;
@@ -504,7 +630,6 @@ textarea.form-control {
 		border-width: 5px 5px 0;
 		border-top-color: #000;
 	}
-
 	&.top-right .tooltip-arrow {
 		bottom: 0;
 		left: 5px;
@@ -512,7 +637,6 @@ textarea.form-control {
 		border-width: 5px 5px 0;
 		border-top-color: #000;
 	}
-
 	&.right .tooltip-arrow {
 		top: 50%;
 		left: 0;
@@ -520,7 +644,6 @@ textarea.form-control {
 		border-width: 5px 5px 5px 0;
 		border-right-color: #000;
 	}
-
 	&.left .tooltip-arrow {
 		top: 50%;
 		right: 0;
@@ -528,7 +651,6 @@ textarea.form-control {
 		border-width: 5px 0 5px 5px;
 		border-left-color: #000;
 	}
-
 	&.bottom .tooltip-arrow {
 		top: 0;
 		left: 50%;
@@ -536,7 +658,6 @@ textarea.form-control {
 		border-width: 0 5px 5px;
 		border-bottom-color: #000;
 	}
-
 	&.bottom-left .tooltip-arrow {
 		top: 0;
 		right: 5px;
@@ -544,7 +665,6 @@ textarea.form-control {
 		border-width: 0 5px 5px;
 		border-bottom-color: #000;
 	}
-
 	&.bottom-right .tooltip-arrow {
 		top: 0;
 		left: 5px;
@@ -579,7 +699,6 @@ textarea.form-control {
 	line-height: 0;
 	display: block;
 	width: 33px;
-
 	>img {
 		width: 13px;
 		vertical-align: top;
@@ -597,11 +716,61 @@ textarea.form-control {
 		line-height: 20px;
 		margin: 0 0 12px;
 	}
-	.checkbox-input-wrapper{
+	.checkbox-input-wrapper {
 		margin: 18px 0 15px;
 	}
-	a{
+	a {
 		color: #000;
 	}
-	.ask-a-question__text{margin: 0 0 20px;}
+	.ask-a-question__text {
+		margin: 0 0 20px;
+	}
+	.g-recaptcha {
+		transform: scale(0.77);
+		transform-origin: 0 0;
+	}
+}
+.additional-static{
+	margin: 0;
+	padding: 15px 17px 4px;
+	list-style: none;
+	border-bottom: 1px solid $gray4;
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 14px
+	}
+	&__text{
+		color: $gray_text;
+	}
+	&__val{
+		width: 44px;
+		text-align: right;
+	}
+}
+.countries-visited{
+	padding: 12px 17px 14px;
+	font-size: 14px;
+	line-height: 19px;
+	&__list{
+		margin: 0 -8px 19px;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		padding: 0 8px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&__title{
+		font-weight: 700;
+		margin: 0 0 9px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	&__text{
+		margin: 0;
+	}
 }
