@@ -1,0 +1,125 @@
+//= inc/_head.html
+<body>
+	<div class="wrapper">
+		<div class="page">
+			//= inc/_header-page.html
+			<main class="checkout">
+				<div class="container">
+					<h1 class="h2">Оформление заказа</h1>
+
+
+					<form id="example-advanced-form" action="#">
+						<h3>Account</h3>
+						<fieldset>
+							<legend>Account Information</legend>
+							<label for="userName-2">User name *</label>
+							<input id="userName-2" name="userName" type="text" class="required">
+							<label for="password-2">Password *</label>
+							<input id="password-2" name="password" type="text" class="required">
+							<label for="confirm-2">Confirm Password *</label>
+							<input id="confirm-2" name="confirm" type="text" class="required">
+							<p>(*) Mandatory</p>
+						</fieldset>
+						<h3>Profile</h3>
+						<fieldset>
+							<legend>Profile Information</legend>
+							<label for="name-2">First name *</label>
+							<input id="name-2" name="name" type="text" class="required">
+							<label for="surname-2">Last name *</label>
+							<input id="surname-2" name="surname" type="text" class="required">
+							<label for="email-2">Email *</label>
+							<input id="email-2" name="email" type="text" class="required email">
+							<label for="address-2">Address</label>
+							<input id="address-2" name="address" type="text">
+							<label for="age-2">Age (The warning step will show up if age is less than 18) *</label>
+							<input id="age-2" name="age" type="text" class="required number">
+							<p>(*) Mandatory</p>
+						</fieldset>
+						<h3>Profile</h3>
+						<fieldset>
+							<legend>Profile Information</legend>
+							<label for="name-2">First name *</label>
+							<input id="name-2" name="name" type="text" class="required">
+							<label for="surname-2">Last name *</label>
+							<input id="surname-2" name="surname" type="text" class="required">
+							<label for="email-2">Email *</label>
+							<input id="email-2" name="email" type="text" class="required email">
+							<label for="address-2">Address</label>
+							<input id="address-2" name="address" type="text">
+							<label for="age-2">Age (The warning step will show up if age is less than 18) *</label>
+							<input id="age-2" name="age" type="text" class="required number">
+							<p>(*) Mandatory</p>
+						</fieldset>
+						<h3>Finish</h3>
+						<fieldset>
+							<legend>Terms and Conditions</legend>
+							<input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+						</fieldset>
+					</form>
+
+
+
+				</div>
+			</main><!-- / checkout -->
+		</div>
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<div class="newsletter__inner">
+							<h3 class="newsletter__title">Подпишитесь на новости</h3>
+							<form id="subscribe" action="#" class="newsletter__form">
+								<div class="newsletter__row">
+									<div class="newsletter__column-input">
+										<div class="newsletter__input-wrapper">
+											<div class="newsletter__input-wrapper__inner">
+												<label for="newsletter-email" class="newsletter__label">Введите ваш Email</label>
+												<input type="email" id="newsletter-email" name="newsletterEmail" class="newsletter__email" placeholder="Введите ваш Email" required>
+											</div>
+										</div>
+									</div>
+									<div class="newsletter__column-btn">
+										<button type="submit" class="newsletter__btn" aria-label="Отправить">
+											<i data-feather="arrow-right"></i>
+											<span class="newsletter__btn__text">Отправить</span>
+										</button>
+									</div>
+								</div>
+								<div class="newsletter__checkbox-wrapper">
+									<div class="newsletter__checkbox-wrapper__inner">
+										<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+										<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="seo">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<h2 class="seo__title">Search Engine Optimization</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column-2">
+						<div class="seo__left">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+					<div class="column-2">
+						<div class="seo__right">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		//= inc/_footer.html
+	</div><!-- / wrapper -->
+	//= inc/_scripts.html
+</body>
+</html>

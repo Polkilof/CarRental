@@ -153,6 +153,12 @@ $(document).ready(function() {
 	});
 	$(".accordeon dl.current dd").show();
 
+
+	
+
+
+
+
 	$('[data-toggle="tooltip"]').tooltip()
 
 	$('.ask-a-question form').validate({
@@ -186,7 +192,7 @@ var $document = $(window),
 	$element = $('.header'),
 	className = 'header_has-scrolled';
 
-$document.on('scroll', function() {
+$document.on('scroll load', function() {
 	if ($document.scrollTop() > 0) {
 		$element.addClass(className);
 	} else {
@@ -195,14 +201,6 @@ $document.on('scroll', function() {
 
 });
 
-$document.on('load', function() {
-	if ($document.scrollTop() > 0) {
-		$element.addClass(className);
-	} else {
-		$element.removeClass(className);
-	}
-
-});
 
 $('#from-date').datepicker({
 	language: 'ru',
@@ -337,3 +335,97 @@ $(window).on('load resize', function() {
 });
 
 feather.replace();
+
+function uploadImage() {
+	  var button = $('.images .pic');
+	  var uploader = $('<input type="file" accept="image/*" />');
+	  var images = $('.images');
+	  var deleteItem = $('.delete-img');
+	  
+	  button.on('click', function () {
+		uploader.click()
+	  })
+	  
+	  uploader.on('change', function () {
+		  var reader = new FileReader();
+		  var name = uploader.val().replace(/\\/g, '/');
+		  reader.onload = function(event) {
+			images.prepend('<li><div class="img" style="background-image: url(\'' + event.target.result + '\');" rel="'+ event.target.result  +'"></div><p>'+ name +'</p><a href="#" class="delete-img">Удалить</a></li>')
+		  }
+		  reader.readAsDataURL(uploader[0].files[0])
+  
+	   })
+	  
+	 images.on('click', '.delete-img', function(e){
+		e.preventDefault();
+		$(this).parents('li').remove()
+	  })
+	
+}uploadImage();
+
+
+
+
+
+
+var form = $("#example-advanced-form").show();
+form.steps({
+	headerTag: "h3",
+	bodyTag: "fieldset",
+	transitionEffect: "slideLeft",
+	/*onStepChanging: function (event, currentIndex, newIndex)
+	{
+		// Allways allow previous action even if the current form is not valid!
+		if (currentIndex > newIndex)
+		{
+			return true;
+		}
+		// Forbid next action on "Warning" step if the user is to young
+		if (newIndex === 3 && Number($("#age-2").val()) < 18)
+		{
+			return false;
+		}
+		// Needed in some cases if the user went back (clean up)
+		if (currentIndex < newIndex)
+		{
+			// To remove error styles
+			form.find(".body:eq(" + newIndex + ") label.error").remove();
+			form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+		}
+		form.validate().settings.ignore = ":disabled,:hidden";
+		return form.valid();
+	},
+	onStepChanged: function (event, currentIndex, priorIndex)
+	{
+		// Used to skip the "Warning" step if the user is old enough.
+		if (currentIndex === 2 && Number($("#age-2").val()) >= 18)
+		{
+			form.steps("next");
+		}
+		// Used to skip the "Warning" step if the user is old enough and wants to the previous step.
+		if (currentIndex === 2 && priorIndex === 3)
+		{
+			form.steps("previous");
+		}
+	},
+	onFinishing: function (event, currentIndex)
+	{
+		form.validate().settings.ignore = ":disabled";
+		return form.valid();
+	},
+	onFinished: function (event, currentIndex)
+	{
+		alert("Submitted!");
+	}
+}).validate({
+	errorPlacement: function errorPlacement(error, element) { element.before(error); },
+	rules: {
+		confirm: {
+			equalTo: "#password-2"
+		}
+	}*/
+	onFinished: function (event, currentIndex)
+	{
+		alert("Submitted!");
+	}
+});
