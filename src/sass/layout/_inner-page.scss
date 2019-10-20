@@ -1,0 +1,192 @@
+.inner-page{
+	padding: 43px 0 14px;
+	@include media("<phone"){
+		padding: 31px 0 0;
+	}
+	&__title{
+		margin: 0 0 22px;
+		@include media("<phone"){
+			margin: 0 0 12px;
+		}
+	}
+	&__count{
+		@include media("<tablet"){
+			font-size: 16px;
+		}
+	}
+}
+.content{
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 300;
+	h2{
+		font-size: 24px;
+		line-height: 32px;
+		margin: 0 0 17px;
+		font-weight: 700;
+		@include media("<phone"){
+			margin: 0 0 15px;
+		}
+	}
+	&__img{
+		margin: 0 0 32px;
+		padding-top: 27.3%;
+		@include media("<phone"){
+			padding-top: 87.1%;
+		}
+	}
+	p{
+		margin: 0 0 26px;
+	}
+	ul{
+		margin: 0 0 16px;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		@include media("<phone"){
+			display: block;
+			margin-bottom: 19px;
+		}
+		li{
+			max-width: 50%;
+			flex: 0 0 50%;
+			position: relative;
+			padding: 0 23px;
+			margin: 0 0 15px;
+			@include media("<phone"){
+				max-width: 100%;
+			}
+			&:before{
+				content: '';
+				border: 1px solid $blue;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				top: 8px;
+				left: 0;
+			}
+		}
+	}
+	table{
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		color: $gray_text;
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 0 20px;
+		th{
+			width: 50%;
+			padding: 13px;
+			border-bottom: 1px solid $gray4;
+			color: $black;
+			@include media("<phone"){
+				padding: 10px 5px 10px 1px;
+			}
+		}
+		td{
+			width: 50%;
+			padding: 6px 13px;
+			@include media("<phone"){
+				padding: 9px 5px 9px 1px;
+			}
+		}
+		tr:nth-child(odd){
+			background: $gray_light;
+		}
+	}
+}
+
+.orders-table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 45px;
+	@include media("<tablet"){
+		margin: 11px 0 23px
+	}
+	th{
+		font-weight: 700;
+		padding: 12px 14px;
+		border-bottom: 1px solid $gray4;
+		@include media("<phone"){
+			line-height: 19px;
+			font-size: 14px;
+			padding: 8px 5px;
+		}
+	}
+	tr:nth-child(odd){
+		background: $gray_light;
+	}
+	td{
+		padding: 10px 14px;
+		@include media("<phone"){
+			line-height: 19px;
+			font-size: 14px;
+			padding: 10px 5px;
+		}
+	}
+	&__view-link{
+		color: $blue;
+	}
+	&__remove-link{
+		display: inline-block;
+		vertical-align: top;
+		width: 18px;
+		height: 20px;
+		background: url(../images/icons/ico-close.svg) no-repeat 50% 50%;
+		&:hover{
+			opacity: .5;
+		}
+	}
+	&__number{
+		width: 16.1%;
+		@include media("<tablet"){
+			width: 22%;
+		}
+		a{
+			@include media("<tablet"){
+				color: $blue;
+				font-weight: 700;
+			}
+		}
+	}
+	&__start{
+		width: 17.1%;
+	}
+	&__finish{
+		width: 17.2%;
+	}
+	&__car{
+		width: 15.4%;
+		@include media("<phone"){
+			width: 20.2%;
+		}
+	}
+	&__price{
+		width: 18%;
+	}
+	&__view{
+		width: 12.4%;
+		@include media("<tablet"){
+			display: none;
+		}
+	}
+}
+.btn-more-block{
+	margin: 0 0 36px;
+	text-align: center;
+	@include media("<phone"){
+		margin: 0 0 87px;
+	}
+}
+.table-scroll{
+	@include media("<phone"){
+		overflow-x: auto;
+		table{
+			min-width: 600px;
+		}
+	}
+}

@@ -373,6 +373,13 @@ form.steps({
 	headerTag: "h3",
 	bodyTag: "fieldset",
 	transitionEffect: "slideLeft",
+	labels: {
+		cancel: "Назад",
+		current: "",
+		finish: "Оформить заявку",
+		next: "Далее",
+		previous: "Назад",
+	},
 	/*onStepChanging: function (event, currentIndex, newIndex)
 	{
 		// Allways allow previous action even if the current form is not valid!
