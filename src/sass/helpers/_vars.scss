@@ -53,7 +53,8 @@ $rhino:#293554;
 $base-color: $black;
 $body-bg: $white;
 
-$link-color: $black;
+$link-color: $blue;
+$link-color_hover: darken(desaturate($blue, 16.15), 5.5);
 
 $btn-color: $black;
 $btn-border-radius-base: 0;

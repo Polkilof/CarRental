@@ -186,7 +186,65 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
+	$('.form').validate({
+		errorClass: "error",
+		validClass: "valid",
+		highlight: function(element) {
+			$(element).parent().addClass('error').removeClass('valid');
+		},
+		unhighlight: function(element) {
+			$(element).parent().removeClass('error').addClass('valid');
+		},
+		rules: {
+			full_name: {
+				required: true
+			},
+			name_company: {
+				required: true
+			},
+			identification_code: {
+				required: true,
+				number: true
+			},
+			surname: {
+				required: true
+			},
+			email: {
+				required: true,
+				myEmail: true
+			},
+			email2: {
+				required: true,
+				myEmail: true
+			},
+			phone: {
+				required: true,
+				myPhone: true
+			},
+			message: {
+				required: true
+			},
+			ask_checkbox: {
+				required: true
+			}
+		}
+	});
+	$.validator.addMethod(
+		"myPhone",
+		function(value, element){
+			return value.match(/[0-9\-\(\)\s]+/);
+		}
+	);
+	$.validator.addMethod(
+		"myEmail",
+		function(value, element){
+			return value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+		}
+	);
+
 });
+
 
 var $document = $(window),
 	$element = $('.header'),
@@ -336,37 +394,6 @@ $(window).on('load resize', function() {
 
 feather.replace();
 
-function uploadImage() {
-	  var button = $('.images .pic');
-	  var uploader = $('<input type="file" accept="image/*" />');
-	  var images = $('.images');
-	  var deleteItem = $('.delete-img');
-	  
-	  button.on('click', function () {
-		uploader.click()
-	  })
-	  
-	  uploader.on('change', function () {
-		  var reader = new FileReader();
-		  var name = uploader.val().replace(/\\/g, '/');
-		  reader.onload = function(event) {
-			images.prepend('<li><div class="img" style="background-image: url(\'' + event.target.result + '\');" rel="'+ event.target.result  +'"></div><p>'+ name +'</p><a href="#" class="delete-img">Удалить</a></li>')
-		  }
-		  reader.readAsDataURL(uploader[0].files[0])
-  
-	   })
-	  
-	 images.on('click', '.delete-img', function(e){
-		e.preventDefault();
-		$(this).parents('li').remove()
-	  })
-	
-}uploadImage();
-
-
-
-
-
 
 var form = $("#example-advanced-form").show();
 form.steps({
@@ -380,44 +407,19 @@ form.steps({
 		next: "Далее",
 		previous: "Назад",
 	},
-	/*onStepChanging: function (event, currentIndex, newIndex)
+	onStepChanging: function (event, currentIndex, newIndex)
 	{
 		// Allways allow previous action even if the current form is not valid!
 		if (currentIndex > newIndex)
 		{
 			return true;
 		}
-		// Forbid next action on "Warning" step if the user is to young
-		if (newIndex === 3 && Number($("#age-2").val()) < 18)
-		{
-			return false;
-		}
-		// Needed in some cases if the user went back (clean up)
-		if (currentIndex < newIndex)
-		{
-			// To remove error styles
-			form.find(".body:eq(" + newIndex + ") label.error").remove();
-			form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-		}
-		form.validate().settings.ignore = ":disabled,:hidden";
+		//form.validate().settings.ignore = ":disabled,:hidden";
 		return form.valid();
-	},
-	onStepChanged: function (event, currentIndex, priorIndex)
-	{
-		// Used to skip the "Warning" step if the user is old enough.
-		if (currentIndex === 2 && Number($("#age-2").val()) >= 18)
-		{
-			form.steps("next");
-		}
-		// Used to skip the "Warning" step if the user is old enough and wants to the previous step.
-		if (currentIndex === 2 && priorIndex === 3)
-		{
-			form.steps("previous");
-		}
 	},
 	onFinishing: function (event, currentIndex)
 	{
-		form.validate().settings.ignore = ":disabled";
+		//form.validate().settings.ignore = ":disabled";
 		return form.valid();
 	},
 	onFinished: function (event, currentIndex)
@@ -425,14 +427,113 @@ form.steps({
 		alert("Submitted!");
 	}
 }).validate({
-	errorPlacement: function errorPlacement(error, element) { element.before(error); },
+	errorClass: "error",
+	validClass: "valid",
+	highlight: function(element) {
+		$(element).parent().addClass('error').removeClass('valid');
+	},
+	unhighlight: function(element) {
+		$(element).parent().removeClass('error').addClass('valid');
+	},
 	rules: {
-		confirm: {
-			equalTo: "#password-2"
+		full_name: {
+			required: true
+		},
+		name_company: {
+			required: true
+		},
+		identification_code: {
+			required: true,
+			number: true
+		},
+		surname: {
+			required: true
+		},
+		email_person: {
+			required: true,
+			email: true,
+		},
+		email_company: {
+			required: true,
+			email: true,
+		},
+		phone: {
+			required: true,
+			number: true,
+		},
+		message: {
+			required: false
+		},
+		ask_checkbox: {
+			required: true
 		}
-	}*/
-	onFinished: function (event, currentIndex)
-	{
-		alert("Submitted!");
 	}
+});
+
+
+function uploadImage(){
+	var button = $('.images .pic');
+	var uploader = $('<input type="file" accept="image/*" />');
+	var images = $('.images');
+	var deleteItem = $('.delete-img');
+	button.on('click', function () {
+		uploader.click()
+	})
+	uploader.on('change', function () {
+		var reader = new FileReader();
+		var name = uploader.val().replace(/\\/g, '/').replace(/.*\//, '');
+		reader.onload = function(event) {
+			images.prepend('<li><div class="img" style="background-image: url(\'' + event.target.result + '\');" rel="'+ event.target.result  +'"></div><p>'+ name +'</p><a href="#" class="delete-img">Удалить</a></li>')
+		}
+		reader.readAsDataURL(uploader[0].files[0])
+	})
+	images.on('click', '.delete-img', function(e){
+		e.preventDefault();
+		$(this).parents('li').remove()
+	})
+}uploadImage();
+
+function mapInitialize(map_) {
+	var latlng = new google.maps.LatLng(51.5287718, -0.2416804);
+	var myOptions = {
+		center: latlng,
+		zoom: 12,
+		zoomControl: true,
+		scaleControl: true,
+		//scrollwheel: true,
+		//mapTypeControl: false,
+		//streetViewControl: false,
+		//rotateControl: false,
+		//disableDoubleClickZoom: true
+	};
+	var map = new google.maps.Map(document.getElementById(map_), myOptions);
+	var stylesBW = [
+		{
+			featureType: "all",
+			stylers: [
+				{ saturation: 0 }
+			]
+		}
+	];
+	map.setOptions({styles: stylesBW});
+	function addMarker(feature) {
+		var marker = new google.maps.Marker({
+			position: feature.position,
+			icon: '../images/ico-marker.png',
+			map: map
+		});
+	}
+	var features = [
+		{
+			position: new google.maps.LatLng(51.5073509, -0.1277583)
+		}
+	];
+
+	for (var i = 0, feature; feature = features[i]; i++) {
+		addMarker(feature);
+	}
+}
+$('#map').each(function(){
+	var map_ = $(this).attr('id');
+	mapInitialize(map_);
 });

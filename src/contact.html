@@ -1,0 +1,154 @@
+//= inc/_head.html
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			//= inc/_header-page.html
+			<main class="contact">
+				<div class="container">
+					<h1 class="h2 inner-page__title">Контакты</h1>
+					<div class="row contact__row">
+						<div class="col-lg-7">
+							<div class="contact__holder">
+								<ul class="contact__list">
+									<li class="contact__item">
+										<i class="contact__item-ico"><img src="images/map-pin.svg" alt="image description"></i>
+										<address class="contact__item-link address">11520 St Charles rock rd, ste 102B Bridgeton, MO 63044</address>
+									</li>
+									<li class="contact__item">
+										<i class="contact__item-ico"><img src="images/phone-call.svg" alt="image description"></i>
+										<div>
+											<a href="tel:+380664275632" class="contact__item-link">+38 066 427 56 32</a>
+											<a href="tel:+380664275632" class="contact__item-link">+38 066 427 56 32</a>
+										</div>
+									</li>
+									<li class="contact__item">
+										<i class="contact__item-ico"><img src="images/mail.svg" alt="image description"></i>
+										<a href="mailto:" class="contact__item-link">support@carrental.sk</a>
+									</li>
+									<li class="contact__item">
+										<a href="#" class="contact__item-link facebook">Мы в соц. сетях <i class="contact__item-ico"><img src="images/facebook.svg" alt="image description"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="ask-a-question contact__holder">
+								<form action="#">
+									<h4 class="h4 ask-a-question__h4">Напишите нам</h4>
+									<div class="form-group">
+										<input type="text" class="form-control" name="full_name" placeholder="Ваше имя:">
+									</div>
+									<div class="form-group">
+										<input type="tel" class="form-control" name="phone" placeholder="Телефон:">
+									</div>
+									<div class="form-group">
+										<textarea cols="30" rows="10" class="form-control" name="message" placeholder="Сообщение:"></textarea>
+									</div>
+									<div class="checkbox-input-wrapper checkbox-input-wrapper_top">
+										<div class="checkbox-input-wrapper__inner">
+											<input id="ask-1" name="ask_checkbox" type="checkbox" class="checkbox-input">
+											<label for="ask-1" class="checkbox-input-label">Согласен с условиями обработки персональных данных</label>
+										</div>
+									</div>
+									<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+									<p class="ask-a-question__text">This site is protected by reCAPTCHA and the <a href="#">Google Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+									<button class="btn btn-primary btn-block" type="submit" data-toggle="modal" data-target="#form-modal">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="map" class="map"></div>
+				</div>
+			</main><!-- /  -->
+		</div>
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<div class="newsletter__inner">
+							<h3 class="newsletter__title">Подпишитесь на новости</h3>
+							<form id="subscribe" action="#" class="newsletter__form">
+								<div class="newsletter__row">
+									<div class="newsletter__column-input">
+										<div class="newsletter__input-wrapper">
+											<div class="newsletter__input-wrapper__inner">
+												<label for="newsletter-email" class="newsletter__label">Введите ваш Email</label>
+												<input type="email" id="newsletter-email" name="newsletterEmail" class="newsletter__email" placeholder="Введите ваш Email" required>
+											</div>
+										</div>
+									</div>
+									<div class="newsletter__column-btn">
+										<button type="submit" class="newsletter__btn" aria-label="Отправить">
+											<i data-feather="arrow-right"></i>
+											<span class="newsletter__btn__text">Отправить</span>
+										</button>
+									</div>
+								</div>
+								<div class="newsletter__checkbox-wrapper">
+									<div class="newsletter__checkbox-wrapper__inner">
+										<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+										<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="seo">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<h2 class="seo__title">Search Engine Optimization</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column-2">
+						<div class="seo__left">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+					<div class="column-2">
+						<div class="seo__right">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		//= inc/_footer.html
+	</div><!-- / wrapper -->
+	<div class="modal fade modal_show-close" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="form-modal-label" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="form-modal-label">Выйти</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Cообщение успешно отправлено
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn" data-dismiss="modal">Закрыть</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key" async defer></script>
+	<script>
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'homepage' }).then(function(token) {});
+	});
+	</script>
+	//= inc/_scripts.html
+</body>
+
+</html>

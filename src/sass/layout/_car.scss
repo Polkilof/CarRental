@@ -9,6 +9,10 @@
 	.h1{
 		margin-bottom: 40px;
 	}
+	h4, .h4{
+		font-size: 16px;
+		margin-bottom: 16px;
+	}
 }
 .accordeon{
 	counter-reset: list;
@@ -267,7 +271,7 @@
 .form-link-box{
 	display: block;
 	margin-top: 30px;
-	@include media('<phone'){
+	@include media('<tablet'){
 		margin-top: 10px;
 		margin-bottom: 20px;
 	}
@@ -283,6 +287,7 @@
 	margin-right:12px;
 	font-size: 16px;
 	line-height: 22px;
+	transition: all .2s;
 	@include media('<phone'){
 		margin-bottom: 10px;
 	}
@@ -298,10 +303,13 @@
 		height: 19px;
 	}
 	&_change{
-		color: #006EBD;
+		color: #006ebd;
 		&:before{
 			background: url(../images/change-ico.svg)50% 50% no-repeat;
 			background-size: 100% auto;
+		}
+		&:hover{
+			color: darken(desaturate(#006ebd, 16.15), 5.5);
 		}
 	}
 	&_remove{
@@ -309,6 +317,9 @@
 		&:before{
 			background: url(../images/remove-ico.svg)50% 50% no-repeat;
 			background-size: 100% auto;
+		}
+		&:hover{
+			color: darken(desaturate(#9E1212, 16.15), 5.5);
 		}
 	}
 
@@ -334,280 +345,99 @@
 }
 
 .create{
+	padding: 4px 0 0;
 	.images {
-	  display: flex;
-	  flex-wrap:  wrap;
-	  margin: 0 -10px;
+		display: flex;
+		flex-wrap:  wrap;
+		margin: 0 -10px;
 	}
 	.images li{
 		width: 33.333%;
+		min-width: 190px;
 		padding: 0 10px;
 		margin-bottom: 10px;
 		border-radius: 4px;
 		@include media('<phone'){
 			width: 50%;
+			min-width: 145px;
 		}
 	}
-	
-	.images .pic {
-	  flex-basis: 31%;
-	  margin-bottom: 10px;
-	  border-radius: 4px;
-	}
 	.images li .img {
-	  width: 100%;
-	  height: 170px;
-	  background-size: cover;
-	  margin-right: 10px;
-	  background-position: center;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  cursor: pointer;
-	  position: relative;
-	  overflow: hidden;
-	  @include media('<phone'){
-		height: 145px;
-	  }
+		width: 100%;
+		height: 170px;
+		background-size: cover;
+		margin-right: 10px;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		@include media('<phone'){
+			height: 145px;
+		}
 	}
 	.images li .img:nth-child(3n) {
-	  margin-right: 0;
+		margin-right: 0;
 	}
-	.images li  a,
-	.images li  p{
-	  text-transform: capitalize;
-	  z-index: 2;
-	  word-break: break-all;
-	  margin-top: 10px;
+	.images li a,
+	.images li p{
+		//text-transform: capitalize;
+		z-index: 2;
+		word-break: break-all;
+		margin-top: 10px;
 	}
-	.images li  p{
+	.images li p{
 		color: #666;
+		@include media('<phone'){
+			font-size: 14px;
+		}
 	}
-	.images li  a{
+	.images li a{
 		color: $blue;
-	}
-	.images li .img::after {
-	  content: '';
-	  width: 100%;
-	  height: 170px;
-	  transition: opacity .1s ease-in;
-	  border-radius: 4px;
-	  opacity: 0;
-	  position: absolute;
-	}
-	.images li .img:hover::after {
-	  display: block;
-	  background-color: #000;
-	  opacity: .5;
-	}
-	.images li .img:hover span {
-	  display: block;
-	  color: #fff;
-	  font-size: 0;
-	  background: url(../images/delete-img.svg)50% 50% no-repeat;
-	  background-size: 100% auto;
-	  width: 20px;
-	  height: 20px;
+		&:hover{
+			color: darken(desaturate($blue, 16.15), 5.5);
+		}
 	}
 	.images .pic {
-	  background-color: #F5F7FA;
-	  border: 1px solid #ccc;
-	  text-align: center;
-	  padding: 40px 0;
-	  height: 170px;
-	  color: #848EA1;
-	  font-size: 12px;
-	  cursor: pointer;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
+		position: relative;
+		margin-bottom: 10px;
+		border-radius: 0;
+		background-color: rgba($gray_light, 0.4);
+		border: 1px solid #ccc ;
+		text-align: center;
+		padding: 40px 0;
+		height: 170px;
+		color: rgba(0, 0, 0, 0.4);
+		font-size: 14px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media('<phone'){
+			height: 145px;
+		}
+		.create__file-descr{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.create__file-icon{
+			display: block;
+			width: 24px;
+			margin: 0 auto 4px;
+			opacity: 0.6;
+		}
+		.create__file-text{
+			display: block;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 18px;
+			white-space: nowrap;
+			text-align: center;
+			margin: 0;
+			color: rgba(0, 0, 0, 0.4);
+		}
 	}
-
 }
-
-// .create-event{
-// 	&__file{
-// 		position: relative;
-// 		display: block;
-// 		font-size: 20px;
-// 		line-height: 30px;
-// 		font-weight: 600;
-// 		color: $rhino;
-// 		margin-bottom: 4px;
-// 		border-radius: 3px;
-// 		border: 1px solid #ccc;
-// 		@include media('<phone'){
-// 			font-size: 16px;
-// 			line-height: 22px;
-// 		}
-// 		&:after{
-// 			content: "";
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			right: 0;
-// 			bottom: 0;
-// 			transition: all .2s ease-in-out;
-// 			background: linear-gradient(to right, rgba(246, 146, 30, 0.4) 0%, rgba(238, 64, 54, 0.4) 100%);
-// 			opacity: 0;
-// 			visibility: hidden;
-// 			z-index: 200;
-// 		}
-// 		&:hover{
-// 			&:after{
-// 				opacity: 1;
-// 				visibility: visible;
-// 			}
-// 			.create-event__file-tools{
-// 				opacity: 0;
-// 				visibility: hidden;
-// 			}
-// 		}
-// 		&.custom-file{
-// 			max-width: 300px;
-// 			width: 100%;
-// 			height: 200px;
-// 			margin-bottom: 0;
-// 			text-align: center;
-// 			cursor: pointer;
-// 			overflow: hidden;
-// 		}
-// 		&.loaded{
-// 			.create-event__file-preview{
-// 				display: block;
-// 			}
-// 			.create-event__file-descr{
-// 				display: none;
-// 			}
-// 			&:hover{
-// 				&:after{
-// 					opacity: 1;
-// 					visibility: visible;
-// 				}
-// 				.create-event__file-tools{
-// 					opacity: 1;
-// 					visibility: visible;
-// 				}
-// 			}
-// 		}
-// 		&-descr{
-// 			position: absolute;
-// 			top: 50%;
-// 			left: 50%;
-// 			transform: translate(-50%, -50%);
-// 		}
-// 		&-icon{
-// 			display: block;
-// 			width: 24px;
-// 			margin: 0 auto 6px;
-// 		}
-// 		&-text{
-// 			display: block;
-// 			font-weight: 500;
-// 			font-size: 14px;
-// 			line-height: 18px;
-// 			text-align: center;
-// 			color: #8492A5;
-// 		}
-// 		&-input{
-// 			display: inline-block;
-// 			vertical-align: top;
-// 			width: 100%;
-// 			height: 48px;
-// 			-webkit-box-shadow: none;
-// 			box-shadow: none;
-// 			padding: 11px 20px;
-// 			font-size: 16px;
-// 			line-height: 26px;
-// 			&:focus{
-// 				outline: none;
-// 			}
-// 			&.hide{
-// 				position: absolute;
-// 				z-index: -1;
-// 				opacity: 0;
-// 				visibility: hidden;
-// 				width: 0;
-// 				height: 0;
-// 				&:focus{
-// 					border: none;
-// 					outline: none;
-// 				}
-// 			}
-// 		}
-// 		&-preview{
-// 			position: absolute;
-// 			top: 50%;
-// 			left: 50%;
-// 			transform: translate(-50%, -50%);
-// 			max-width: 100%;
-// 			max-height: 100%;
-// 			display: none;
-// 			z-index: 100;
-// 			&.preview-active{
-// 				display: block;
-// 			}
-// 		}
-// 		&-tools{
-// 			position: absolute;
-// 			right: 20px;
-// 			top: 12px;
-// 			display: flex;
-// 			justify-content: center;
-// 			opacity: 0;
-// 			visibility: hidden;
-// 			z-index: 210;
-// 			transition: all .2s ease-in-out;
-// 		}
-// 		&-tip{
-// 			height: 40px;
-// 			width: 40px;
-// 			min-width: 40px;
-// 			display: flex;
-// 			justify-content: center;
-// 			align-items: center;
-// 			border-radius: 50%;
-// 			margin: 0 4px;
-// 			background-color: $white;
-// 			cursor: pointer;
-// 			&:hover{
-// 				.create-event__file-img{
-// 					opacity: 1;
-// 				}
-// 			}
-// 		}
-// 		&-img{
-// 			display: block;
-// 			opacity: .7;
-// 			transition: all .2s;
-// 		}
-
-// 		&.custom-file_avatar{
-// 			position: absolute;
-// 			width: 100%;
-// 			height: 100%;
-// 			border: 1px dashed $gray_light;
-// 			border-radius: 50%;
-// 			background: $white;
-// 			overflow: hidden;
-// 			margin: 0;
-// 			cursor: pointer;
-// 			.create-event__file-icon{
-// 				margin: 0;
-// 			}
-// 			.create-event__file-tools{
-// 				position: absolute;
-// 				top: 50%;
-// 				left: 50%;
-// 				transform: translate(-50%, -50%);
-// 			}
-// 			.create-event__file-tip{
-// 				margin: 0 6px;
-// 				// background: rgba($oxford_blue, .5);
-// 			}
-// 			.create-event__file-img{
-// 				opacity: .85;
-// 			}
-// 		}
-// 	}
-// }

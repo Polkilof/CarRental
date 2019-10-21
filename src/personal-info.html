@@ -10,10 +10,10 @@
 
 					<form id="example-advanced-form" class="form" action="#">
 						<h3>Личные данные</h3>
-						<fieldset>
+						<fieldset class="checkout__personal-data">
 							<div class="row">
 								<div class="col-lg-6">
-									<ul class="nav mb-3" id="pills-tab" role="tablist">
+									<ul class="nav  mb-3" id="pills-tab" role="tablist">
 										<li class="nav-item">
 											<a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Физическое лицо</a>
 										</li>
@@ -27,88 +27,292 @@
 												<input type="text" class="form-control" name="name" placeholder="Имя">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Фамилия *">
+												<input type="text" class="form-control" name="surname" placeholder="Фамилия *" required>
 											</div>
 											<div class="form-group">
-												<input type="emeil" class="form-control" name="emeil" placeholder="Email *">
+												<input type="email" class="form-control" name="email_person" placeholder="Email *" required>
 											</div>
 											<div class="form-group">
-												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *">
+												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *" required>
 											</div>
-											<div class="form-group">
-												<div class="flex-container flex-container_colums">
-													<input type="text" class="form-control form-control_promo" name="promo" placeholder="Промокод">
-													<span class="characteristics-list__title">Промокод -90% активен</span>
+											<div class="checkbox-tooltip">
+												<div class="checkbox-input-wrapper__inner">
+													<input id="chk-age-1" type="checkbox" class="checkbox-input">
+													<label for="chk-age-1" class="checkbox-input-label">Возраст водителя между 30 - 65</label>
+													<span class="btn-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top"><img src="images/icons/info.svg" alt="image description"></span>
 												</div>
-											</div>
-											<div class="form-link-box">
-												<a href="#" class="form-link form-link_change">Изменить пароль</a>
-												<a href="#" class="form-link form-link_remove">Удалить аккаунт</a>
 											</div>
 										</div>
 										<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 											<div class="form-group">
-												<input type="text" class="form-control" name="company" placeholder="Наименование организации *">
+												<input type="text" class="form-control" name="name_company" placeholder="Наименование организации *" required>
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Идентификационный код *">
+												<input type="text" class="form-control" name="identification_code" placeholder="Идентификационный код *" required>
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Код НДС">
+												<input type="text" class="form-control" name="code_nds" placeholder="Код НДС">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="ФИО контактного лоца *">
+												<input type="text" class="form-control" name="full_name" placeholder="ФИО контактного лоца *" required>
 											</div>
 											<div class="form-group">
-												<input type="emeil" class="form-control" name="emeil" placeholder="Email *">
+												<input type="email" class="form-control" name="email_company" placeholder="Email *" required>
 											</div>
 											<div class="form-group">
-												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *">
+												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *" required>
 											</div>
-											<div class="form-group">
-												<div class="flex-container flex-container_colums">
-													<input type="text" class="form-control form-control_promo" name="promo" placeholder="Промокод">
-													<span class="characteristics-list__title">Промокод -90% активен</span>
+											<div class="checkbox-tooltip">
+												<div class="checkbox-input-wrapper__inner">
+													<input id="chk-age-2" type="checkbox" class="checkbox-input">
+													<label for="chk-age-2" class="checkbox-input-label">Возраст водителя между 30 - 65</label>
+													<span class="btn-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top"><img src="images/icons/info.svg" alt="image description"></span>
 												</div>
-											</div>
-											<div class="form-link-box">
-												<a href="#" class="form-link form-link_change">Изменить пароль</a>
-												<a href="#" class="form-link form-link_remove">Удалить аккаунт</a>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-6">
-									<div class="form-group">
-										<span class="characteristics-list__info">Скан копии документов</span>
-									</div>
+									<h4 class="h4 bold">Скан копии документов</h4>
 									<div class="create">
 										<ul class="create-list images">
+											<li><div class="img" style="background-image: url('../images/Drivers-license.png');"></div><p>Водительское удостоверение.png</p><a href="#" class="delete-img">Удалить</a></li>
 											<li>
 												<div class="pic">
-													Добавить
+													<div class="create__file-descr">
+														<img src="images/camera.svg" class="create__file-icon" alt="Add photo">
+														<p class="create__file-text">добавить</p>
+													</div>
 												</div>
 											</li>
 										</ul>
 									</div>
-
 								</div>
 							</div>
 						</fieldset>
-						<h3>Место получения автомобиля</h3>
-						<fieldset>
-							
+						<h3>Место получения</h3>
+						<fieldset class="checkout__location">
+							<div class="row align-items-center">
+								<div class="col-md-6">
+									<div class="select-wrapper__inner">
+										<label for="place" class="select__label">Место получения</label>
+										<select name="place" id="place">
+											<option></option>
+											<option>Австрия</option>
+											<option>Германия</option>
+											<option>Венгрия</option>
+											<option>Болгария</option>
+											<option>Ватикан</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="checkbox-tooltip">
+										<div class="checkbox-input-wrapper__inner">
+											<input id="chk-return-1" type="checkbox" class="checkbox-input">
+											<label for="chk-return-1" class="checkbox-input-label">Возврат авто в другом местоположении</label>
+											<span class="btn-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top"><img src="images/icons/info.svg" alt="image description"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#checkout-drop" data-toggle="collapse" class="checkout-toggle h4 bold" aria-expanded="false">Какие страны планируете посетить</a>
+							<div id="checkout-drop" class="row collapse checkout-drop">
+								<div class="col-md-6 col-lg-3">
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-1" name="city-1" type="checkbox" class="checkbox-input">
+										<label for="ask-1" class="checkbox-input-label">Республика Кипр</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-2" name="city-2" type="checkbox" class="checkbox-input">
+										<label for="ask-2" class="checkbox-input-label">Италия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-3" name="city-3" type="checkbox" class="checkbox-input">
+										<label for="ask-3" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-4" name="city-4" type="checkbox" class="checkbox-input">
+										<label for="ask-4" class="checkbox-input-label">Великобритания</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-5" name="city-5" type="checkbox" class="checkbox-input">
+										<label for="ask-5" class="checkbox-input-label">Ирландия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-6" name="city-6" type="checkbox" class="checkbox-input">
+										<label for="ask-6" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-7" name="city-6" type="checkbox" class="checkbox-input" checked>
+										<label for="ask-7" class="checkbox-input-label">Альфа центавра</label>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-1" name="city-1" type="checkbox" class="checkbox-input">
+										<label for="ask-1" class="checkbox-input-label">Республика Кипр</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-2" name="city-2" type="checkbox" class="checkbox-input">
+										<label for="ask-2" class="checkbox-input-label">Италия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-3" name="city-3" type="checkbox" class="checkbox-input">
+										<label for="ask-3" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-4" name="city-4" type="checkbox" class="checkbox-input">
+										<label for="ask-4" class="checkbox-input-label">Великобритания</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-5" name="city-5" type="checkbox" class="checkbox-input">
+										<label for="ask-5" class="checkbox-input-label">Ирландия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-6" name="city-6" type="checkbox" class="checkbox-input">
+										<label for="ask-6" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-7" name="city-6" type="checkbox" class="checkbox-input" checked>
+										<label for="ask-7" class="checkbox-input-label">Альфа центавра</label>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-1" name="city-1" type="checkbox" class="checkbox-input">
+										<label for="ask-1" class="checkbox-input-label">Республика Кипр</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-2" name="city-2" type="checkbox" class="checkbox-input">
+										<label for="ask-2" class="checkbox-input-label">Италия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-3" name="city-3" type="checkbox" class="checkbox-input">
+										<label for="ask-3" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-4" name="city-4" type="checkbox" class="checkbox-input">
+										<label for="ask-4" class="checkbox-input-label">Великобритания</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-5" name="city-5" type="checkbox" class="checkbox-input">
+										<label for="ask-5" class="checkbox-input-label">Ирландия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-6" name="city-6" type="checkbox" class="checkbox-input">
+										<label for="ask-6" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-7" name="city-6" type="checkbox" class="checkbox-input" checked>
+										<label for="ask-7" class="checkbox-input-label">Альфа центавра</label>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-1" name="city-1" type="checkbox" class="checkbox-input">
+										<label for="ask-1" class="checkbox-input-label">Республика Кипр</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-2" name="city-2" type="checkbox" class="checkbox-input">
+										<label for="ask-2" class="checkbox-input-label">Италия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-3" name="city-3" type="checkbox" class="checkbox-input">
+										<label for="ask-3" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-4" name="city-4" type="checkbox" class="checkbox-input">
+										<label for="ask-4" class="checkbox-input-label">Великобритания</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-5" name="city-5" type="checkbox" class="checkbox-input">
+										<label for="ask-5" class="checkbox-input-label">Ирландия</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-6" name="city-6" type="checkbox" class="checkbox-input">
+										<label for="ask-6" class="checkbox-input-label">Мальта</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-7" name="city-6" type="checkbox" class="checkbox-input" checked>
+										<label for="ask-7" class="checkbox-input-label">Альфа центавра</label>
+									</div>
+								</div>
+							</div>
 						</fieldset>
 						<h3>Вопросы</h3>
-						<fieldset>
-							
+						<fieldset class="checkout__faq">
+							<div class="checkout__faq-holder">
+								<h4 class="h4 bold">Дополнительные сведения</h4>
+								<textarea cols="30" rows="10" class="form-control" name="message" placeholder="Например: номер рейса, время прибытия, дополнительные услуги для людей с ограниченными возможностями, наличие животных"></textarea>
+							</div>
 						</fieldset>
 						<h3>Оплата</h3>
-						<fieldset>
-							
+						<fieldset class="checkout__payment">
+							<h4 class="h4 bold">Личные данные</h4>
+							<div class="row checkout__payment-data">
+								<div class="col-md-3">
+									<span class="checkout__payment-data-title">Имя</span>
+									<h4 class="h4 bold">Василий</h4>
+								</div>
+								<div class="col-md-3">
+									<span class="checkout__payment-data-title">Фамилия</span>
+									<h4 class="h4 bold">Драгомановский</h4>
+								</div>
+								<div class="col-md-3">
+									<span class="checkout__payment-data-title">Email</span>
+									<h4 class="h4 bold">dragomanovskiy@mail.com</h4>
+								</div>
+								<div class="col-md-3">
+									<span class="checkout__payment-data-title">Телефон</span>
+									<h4 class="h4 bold">+38 056 897 55 77</h4>
+								</div>
+							</div>
+							<div class="row checkout__payment-info">
+								<div class="col-md-5">
+									<h4 class="h4 bold">Место получения автомобиля</h4>
+									<span>Германия</span>
+								</div>
+								<div class="col-md-7">
+									<h4 class="h4 bold">Дополнительные сведения</h4>
+									<p>Дополнительные сведения (номер рейса, время прибытия, дополнительные услуги для людей с ограниченными возможностями, наличие животных)</p>
+								</div>
+							</div>
+							<div class="row checkout__payment-type">
+								<div class="col-md-4">
+									<h4 class="h4 bold">Выбор типа оплаты:</h4>
+									<div class="radio">
+										<input type="radio" name="radio-1" class="radio__input" id="radio-1">
+										<label for="radio-1">Наличные</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-1" class="radio__input" id="radio-2">
+										<label for="radio-2">Оплата картой</label>
+									</div>
+									<div class="radio">
+										<input type="radio" name="radio-1" class="radio__input" id="radio-3">
+										<label for="radio-3">Банковский перевод</label>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-01" name="ask_checkbox" type="checkbox" class="checkbox-input">
+										<label for="ask-01" class="checkbox-input-label">Согласен с <a href="#">правилами и условиями</a> обработки данных</label>
+									</div>
+									<div class="checkbox-input-wrapper__inner">
+										<input id="ask-02" name="save_checkbox" type="checkbox" class="checkbox-input">
+										<label for="ask-02" class="checkbox-input-label">Сохранить мой профиль для будущих покупок и получения дополнительных скидок</label>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<h4 class="h4 bold">Промокод</h4>
+									<div class="form-group">
+										<input type="text" class="form-control" name="promo" placeholder="Промокод">
+									</div>
+								</div>
+							</div>
 						</fieldset>
 					</form>
-
 
 
 				</div>

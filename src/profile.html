@@ -3,7 +3,7 @@
 <body>
 	<div class="wrapper">
 		<div class="page">
-			//= inc/_header-page.html
+			//= inc/_header-page_signin.html
 			<main class="profile-page">
 				<div class="container">
 					<h2 class="h2">Профиль</h1>
@@ -19,7 +19,6 @@
 										<li class="nav-item">
 											<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Юридическое лицо</a>
 										</li>
-										
 									</ul>
 									<div class="tab-content" id="pills-tabContent">
 										<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -27,13 +26,13 @@
 												<input type="text" class="form-control" name="name" placeholder="Имя">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Фамилия *">
+												<input type="text" class="form-control" name="surname" placeholder="Фамилия *" required>
 											</div>
 											<div class="form-group">
-												<input type="emeil" class="form-control" name="emeil" placeholder="Email *">
+												<input type="emeil" class="form-control" name="email_person" placeholder="Email *" required>
 											</div>
 											<div class="form-group">
-												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *">
+												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *" required>
 											</div>
 											<div class="form-group">
 												<div class="flex-container flex-container_colums">
@@ -42,28 +41,28 @@
 												</div>
 											</div>
 											<div class="form-link-box">
-												<a href="#" class="form-link form-link_change">Изменить пароль</a>
-												<a href="#" class="form-link form-link_remove">Удалить аккаунт</a>
+												<a href="#" data-toggle="modal" data-target="#changeModal" class="form-link form-link_change">Изменить пароль</a>
+												<a href="#" data-toggle="modal" data-target="#deleteModal" class="form-link form-link_remove">Удалить аккаунт</a>
 											</div>
 										</div>
 										<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 											<div class="form-group">
-												<input type="text" class="form-control" name="company" placeholder="Наименование организации *">
+												<input type="text" class="form-control" name="name_company" placeholder="Наименование организации *" required>
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Идентификационный код *">
+												<input type="text" class="form-control" name="identification_code" placeholder="Идентификационный код *" required>
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="Код НДС">
+												<input type="text" class="form-control" name="code_nds" placeholder="Код НДС">
 											</div>
 											<div class="form-group">
-												<input type="text" class="form-control" name="full_name" placeholder="ФИО контактного лоца *">
+												<input type="text" class="form-control" name="full_name" placeholder="ФИО контактного лоца *" required>
 											</div>
 											<div class="form-group">
-												<input type="emeil" class="form-control" name="emeil" placeholder="Email *">
+												<input type="email" class="form-control" name="email_company" placeholder="Email *" required>
 											</div>
 											<div class="form-group">
-												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *">
+												<input type="tel" class="form-control" name="phone" placeholder="Контактный телефон *" required>
 											</div>
 											<div class="form-group">
 												<div class="flex-container flex-container_colums">
@@ -76,25 +75,23 @@
 												<a href="#" class="form-link form-link_remove">Удалить аккаунт</a>
 											</div>
 										</div>
-										
 									</div>
-									
-									
 								</div>
 								<div class="col-lg-6">
-									<div class="form-group">
-										<span class="characteristics-list__info">Скан копии документов</span>
-									</div>
+									<h4 class="h4 bold">Скан копии документов</h4>
 									<div class="create">
 										<ul class="create-list images">
+											<li><div class="img" style="background-image: url('../images/Drivers-license.png');"></div><p>Водительское удостоверение.png</p><a href="#" class="delete-img">Удалить</a></li>
 											<li>
 												<div class="pic">
-													Добавить
+													<div class="create__file-descr">
+														<img src="images/camera.svg" class="create__file-icon" alt="Add photo">
+														<p class="create__file-text">добавить</p>
+													</div>
 												</div>
 											</li>
 										</ul>
 									</div>
-
 								</div>
 							</div>
 							<div class="form-btn-box">
@@ -142,6 +139,103 @@
 		</section>
 		//= inc/_footer.html
 	</div><!-- / wrapper -->
+
+	<div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="changeModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="changeModalLabel">Изменить пароль</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="change-password" action="#">
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="change-1" class="text-input-label">Ввведите старый пароль</label>
+								<input type="password" id="change-1" name="regPassword" class="text-input" placeholder="Ввведите старый пароль" required>
+								<button type="button" class="password-toggle"><i data-feather="eye"></i></button>
+							</div>
+						</div>
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="change-2" class="text-input-label">Ввведите новый пароль</label>
+								<input type="password" id="change-2" name="regPassword" class="text-input" placeholder="Ввведите новый пароль" required>
+								<button type="button" class="password-toggle"><i data-feather="eye"></i></button>
+							</div>
+						</div>
+						<div class="text-input-wrapper">
+							<div class="text-input-wrapper__inner">
+								<label for="change-3" class="text-input-label">Ввведите новый пароль еще раз</label>
+								<input type="password" id="change-3" name="regPassword" class="text-input" placeholder="Ввведите новый пароль еще раз" required>
+								<button type="button" class="password-toggle"><i data-feather="eye"></i></button>
+							</div>
+						</div>
+
+						<div class="submit-wrapper">
+							<button type="submit" class="submit-btn">Изменить пароль</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal_show-close modal_signout" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="deleteModalLabel">Удалить аккаунт</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Вы уверены что хотите удалить аккаунт безвозвратно?
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="cancel-btn" data-dismiss="modal">Нет</button>
+						</div>
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn">Да</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal_show-close modal_signout" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="signoutModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="signoutModalLabel">Выйти</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Вы уверены что хотите выйти из личного кабинета?
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="cancel-btn" data-dismiss="modal">Нет</button>
+						</div>
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn">Да</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	//= inc/_scripts.html
 </body>
 
