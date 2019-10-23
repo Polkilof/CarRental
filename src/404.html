@@ -1,0 +1,57 @@
+//= inc/_head.html
+<body>
+	<div class="wrapper">
+		<div class="page">
+			//= inc/_header-page.html
+			<section class="page404">
+				<div class="page404__content">
+					<h1 class="page404__title">404</h1>
+					<strong class="page404__subtitle">Страница не найдена</strong>
+					<p class="page404__text">Такой страницы не существует либо она была удалена</p>
+					<div class="form-btn-box form-btn-box_small">
+						<button class="btn btn-primary btn-block" type="submit">Перейти на главную страницу</button>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<div class="newsletter__inner">
+							<h3 class="newsletter__title">Подпишитесь на новости</h3>
+							<form id="subscribe" action="#" class="newsletter__form">
+								<div class="newsletter__row">
+									<div class="newsletter__column-input">
+										<div class="newsletter__input-wrapper">
+											<div class="newsletter__input-wrapper__inner">
+												<label for="newsletter-email" class="newsletter__label">Введите ваш Email</label>
+												<input type="email" id="newsletter-email" name="newsletterEmail" class="newsletter__email" placeholder="Введите ваш Email" required>
+											</div>
+										</div>
+									</div>
+									<div class="newsletter__column-btn">
+										<button type="submit" class="newsletter__btn" aria-label="Отправить">
+											<i data-feather="arrow-right"></i>
+											<span class="newsletter__btn__text">Отправить</span>
+										</button>
+									</div>
+								</div>
+								<div class="newsletter__checkbox-wrapper">
+									<div class="newsletter__checkbox-wrapper__inner">
+										<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+										<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		//= inc/_footer.html
+	</div><!-- / wrapper -->
+	//= inc/_scripts.html
+</body>
+
+</html>

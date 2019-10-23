@@ -441,3 +441,121 @@
 		}
 	}
 }
+
+.public-holder{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 17px;
+	.data{
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: bold;
+	}
+	.share{
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-size: 16px;
+		line-height: 22px;
+		color: $black;
+		font-weight: normal;
+		&:after{
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 12px;
+			background: url(../images/facebook-ico.svg)50% 50% no-repeat;
+			background-size: 100% auto;
+			width: 26px;
+			height: 26px;
+		}
+	}
+}
+.inner-page_public{
+	ul{
+		flex-direction: column;
+		li{
+			max-width: 100% !important;
+			flex:initial !important;
+		}
+	}
+
+}
+.row__more{
+	margin-bottom: 45px;
+	@include media('<phone'){
+		margin-bottom: 25px;
+	}
+}
+.product{
+	display: block;
+	&__descr{
+		background: $white;
+		padding: 20px 15px;
+		color: #1A1919;
+
+	}
+	&__data{
+		display: block;
+		color: #666;
+		font-size: 14px;
+		line-height: 19px;
+		margin-bottom: 5px;
+	}
+	&__title{
+		display: block;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: bold;
+	}
+}
+
+.page404{
+	display: block;
+	position: relative;
+	background: url(../images/bg-404.jpg)50% 50% no-repeat;
+	background-size: cover;
+	height: 700px;
+	@include media ('<phone'){
+		height: 600px;
+	}
+	&__content{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		text-align: center;
+		@include media ('<phone'){
+			margin: 0 15px;
+		}
+	}
+	&__title{
+		display: block;
+		font-size:147px;
+		line-height: 172px;
+		font-weight: 500;
+		color: $white;
+		font-family: 'Roboto', sans-serif;
+	}
+	&__subtitle{
+		display: block;
+		color: $white;
+		font-size:36px;
+		line-height: 49px;
+		font-weight: bold;
+		margin-bottom: 17px;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: bold;
+		text-align: center;
+		color: $white;
+		margin-bottom: 50px;
+	}
+}
+.form-btn-box_small{
+	margin-top: 0;
+	max-width: 300px;
+}
