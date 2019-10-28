@@ -188,6 +188,34 @@
 	}
 }
 
+.submitted{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $white;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
+	display: none;
+	&.active{
+		display: flex;
+	}
+	&-circle{
+		display: block;
+		margin: 0 auto 20px;
+		width: 46px;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	p{
+		margin-bottom: 0;
+	}
+}
+
 .wizard,
 .tabcontrol{
 	display: block;
@@ -329,6 +357,7 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	width: 100%;
+	min-height: 40px;
 	padding: 0 36px;
 	@include media("<phone"){
 		top: -60px;
@@ -358,8 +387,12 @@
 	@extend .btn;
 	@extend .btn-primary;
 	width: 100%;
+	@include media("<phone"){
+		padding: 9px 6px;
+	}
 }
 .wizard>.actions ul li:first-child{
+	box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.0708588);
 	@include media("<phone"){
 		flex: 1 1 30%;
 	}

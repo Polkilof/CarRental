@@ -183,7 +183,40 @@ $(document).ready(function() {
 			},
 			ask_checkbox: {
 				required: true
+			},
+			radio_1: {
+				required: true
 			}
+		}
+	});
+
+	$('.rent-sidebar__block form').validate({
+		errorClass: "error",
+		validClass: "valid",
+		highlight: function(element) {
+			$(element).parent().addClass('error').removeClass('valid');
+		},
+		unhighlight: function(element) {
+			$(element).parent().removeClass('error').addClass('valid');
+		},
+		rules: {
+			radio_1: {
+				required: true
+			},
+			from_datepicker: {
+				required: true,
+			},
+			to_datepicker: {
+				required: true,
+			},
+		},
+		messages: {
+			from_datepicker: {
+				required: false,
+			},
+			to_datepicker: {
+				required: false,
+			},
 		}
 	});
 	
@@ -245,15 +278,17 @@ $(document).ready(function() {
 
 });
 
-
 var $document = $(window),
 	$element = $('.header'),
 	className = 'header_has-scrolled';
 
 $document.on('scroll load', function() {
 	if ($document.scrollTop() > 0) {
-		$element.addClass(className);
-	} else {
+		if ($element.hasClass(className) === false) {
+			console.log($document.scrollTop());
+			$element.addClass(className);
+		}
+	} else if ($document.scrollTop() <= 1) {
 		$element.removeClass(className);
 	}
 
@@ -424,7 +459,9 @@ form.steps({
 	},
 	onFinished: function (event, currentIndex)
 	{
-		alert("Submitted!");
+		$('.submitted').addClass('active');
+		$('.actions > ul').remove();
+
 	}
 }).validate({
 	errorClass: "error",

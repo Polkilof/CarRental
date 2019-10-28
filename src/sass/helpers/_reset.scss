@@ -164,7 +164,7 @@ table{border-collapse: collapse;}
 /* Smartphone */
 @media only screen and (min-width: 768px){
 	.mb{
-		display: none !important;;
+		display: none !important;
 	}
 	.pc{
 		display: block !important;
@@ -178,6 +178,9 @@ table{border-collapse: collapse;}
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	> img{display: none;}
+}
+.datepicker.dropdown-menu{
+	z-index: 500 !important;
 }
 
 /*typography*/

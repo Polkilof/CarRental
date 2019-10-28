@@ -196,19 +196,19 @@
 															<div class="range-date">
 																<div class="range-date__wrap">
 																	<label for="from-date" class="range-date__prefix">c</label>
-																	<input id="from-date" type="text" class="range-date__input form-control" placeholder="22.08.19">
+																	<input id="from-date" name="from_datepicker" type="text" class="range-date__input form-control" placeholder="22.08.19">
 																</div>
 																<div class="range-date__wrap">
 																	<label for="to-date" class="range-date__prefix">по</label>
-																	<input id="to-date" type="text" class="range-date__input form-control" placeholder="24.08.19">
+																	<input id="to-date" name="to_datepicker" type="text" class="range-date__input form-control" placeholder="24.08.19">
 																</div>
 															</div><!-- / range-date -->
-															<div class="radio">
-																<input type="radio" name="radio-1" class="radio__input" id="radio-1">
+															<div class="radio checkbox-input-wrapper__inner">
+																<input type="radio" name="radio_1" class="radio__input" id="radio-1">
 																<label for="radio-1">До 200 км/день</label>
 															</div><!-- / radio -->
-															<div class="radio">
-																<input type="radio" name="radio-1" class="radio__input" id="radio-2">
+															<div class="radio checkbox-input-wrapper__inner">
+																<input type="radio" name="radio_1" class="radio__input" id="radio-2">
 																<label for="radio-2">Без ограничений пробега</label>
 															</div><!-- / radio -->
 														</div>
@@ -360,7 +360,9 @@
 										<div class="product">
 											<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
 											<div class="product__header">
-												<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+												<div class="img-to-bg">
+													<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image img-to-bg__image">
+												</div>
 											</div>
 											<div class="product__inner">
 												<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
@@ -379,7 +381,9 @@
 										<div class="product">
 											<a href="#" class="product__link" aria-label="Mercedes Benz, G63"></a>
 											<div class="product__header">
-												<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image">
+												<div class="img-to-bg">
+													<img src="images/products/car-1.jpg" alt="Mercedes Benz, G63" class="product__image img-to-bg__image">
+												</div>
 											</div>
 											<div class="product__inner">
 												<img src="images/manufacturer/Mercedes.jpg" width="40" height="40" alt="" class="product__manufacturer">
@@ -449,11 +453,32 @@
 								</div>
 								<div class="newsletter__checkbox-wrapper">
 									<div class="newsletter__checkbox-wrapper__inner">
-										<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
-										<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+									<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
 									</div>
 								</div>
 							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="seo">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<h2 class="seo__title">Search Engine Optimization</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column-2">
+						<div class="seo__left">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+					<div class="column-2">
+						<div class="seo__right">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
 						</div>
 					</div>
 				</div>

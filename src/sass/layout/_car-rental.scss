@@ -383,6 +383,9 @@ textarea.form-control {
 			background: url(../images/icons/calendar.svg) no-repeat 50% 50%;
 			background-size: 15px 15px;
 		}
+		label.error{
+			display: none !important;
+		}
 	}
 	&__prefix {
 		position: absolute;
@@ -413,8 +416,8 @@ textarea.form-control {
 		position: absolute;
 		left: -9999px;
 	}
-	&__input:checked+label,
-	&__input:not(:checked)+label {
+	&__input:checked ~ label,
+	&__input:not(:checked) ~ label {
 		position: relative;
 		padding-left: 25px;
 		cursor: pointer;
@@ -422,8 +425,8 @@ textarea.form-control {
 		display: inline-block;
 		color: $gray_text;
 	}
-	&__input:checked+label:before,
-	&__input:not(:checked)+label:before {
+	&__input:checked ~ label:before,
+	&__input:not(:checked) ~ label:before {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -434,8 +437,8 @@ textarea.form-control {
 		border-radius: 100%;
 		background: #fff;
 	}
-	&__input:checked+label:after,
-	&__input:not(:checked)+label:after {
+	&__input:checked ~ label:after,
+	&__input:not(:checked) ~ label:after {
 		content: '';
 		width: 11px;
 		height: 11px;
@@ -447,13 +450,18 @@ textarea.form-control {
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
 	}
-	&__input:not(:checked)+label:after {
+	&__input:not(:checked) ~ label:after {
 		opacity: 0;
 		visibility: hidden;
 	}
-	&__input:checked+label:after {
+	&__input:checked ~ label:after {
 		opacity: 1;
 		visibility: visible;
+	}
+	&.error{
+		label:before{
+			border-color: #FF9494;
+		}
 	}
 }
 
