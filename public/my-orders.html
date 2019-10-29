@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Car Rental</title>
+
+	<meta property="og:title" content="Project" />
+	<meta property="og:description" content="Project" />
+	<meta property="og:image" content="images/ogp.jpg" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://Project.com" />
+	<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/components/bootstrap-custom.css">
+	<link rel="stylesheet" href="css/components/slick.css">
+	<link rel="stylesheet" href="css/components/bootstrap-datepicker3.standalone.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+						<header class="header header-page">
+							<div class="header__inner">
+								<a href="./index.html" class="header__logo">
+									<img src="images/logo.png" alt="Car Rental" class="header__logo__img header__logo__img_white">
+									<img src="images/logo-color.png" alt="Car Rental" class="header__logo__img header__logo__img_color">
+								</a>
+								<button type="button" class="header__nav-toggle"><i data-feather="menu"></i></button>
+								<nav class="header__nav">
+									<button class="header__nav__close"><i data-feather="x"></i></button>
+									<ul class="header__menu header__menu_left">
+										<li class="header__menu__item"><a href="#" class="header__menu__link">Акции</a></li>
+										<li class="header__menu__item"><a href="#" class="header__menu__link">Трансфер</a></li>
+										<li class="header__menu__item"><a href="#" class="header__menu__link">Партнерам</a></li>
+										<li class="header__menu__item"><a href="#" class="header__menu__link">Правила</a></li>
+									</ul>
+			
+									<ul class="header__menu header__menu_right">
+										<li class="header__menu__item"><a href="#" class="header__menu__link">Контакты</a></li>
+										<li class="header__menu__item header__menu__item_mail"><a href="#" class="header__menu__link"><i data-feather="mail"></i></a></li>
+										<li class="header__menu__item header__menu__item_phone"><a href="tel:+4917688093880" class="header__menu__link header__menu__link_phone"><i data-feather="phone"></i> +49 17688093880</a></li>
+										<li class="header__menu__item">
+											<div class="lang">
+												<label for="lang" class="lang__label">Язык сайта</label>
+												<select name="lang" id="lang">
+													<option value="Русский">Русский</option>
+													<option value="English">English</option>
+												</select>
+											</div>
+											
+										</li>
+										<li class="header__menu__item"><a href="#" class="header__menu__link header__menu__link_login" data-toggle="modal" data-target="#loginModal">Войти</a></li>
+									</ul>
+								</nav>
+							</div>
+						</header>
+			<main class="inner-page">
+				<div class="container">
+					<h1 class="h2 inner-page__title">Мои заказы <span class="inner-page__count">(10/40)</span></h1>
+					<div class="table-scroll">
+						<table class="orders-table">
+							<tr>
+								<th class="orders-table__number">Номер заказа</th>
+								<th class="orders-table__start">С</th>
+								<th class="orders-table__finish">По</th>
+								<th class="orders-table__car">Автомобиль</th>
+								<th class="orders-table__price">Стоимость</th>
+								<th class="orders-table__view">&nbsp;</th>
+								<th class="orders-table__remove">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+							<tr>
+								<td class="orders-table__number"><a href="#" class="orders-table__mobile-link">ETL112345</a></td>
+								<td class="orders-table__start">01.01.2019</td>
+								<td class="orders-table__finish">10.01.2019</td>
+								<td class="orders-table__car">Mercedes</td>
+								<td class="orders-table__price">€ 100</td>
+								<td class="orders-table__view"><a href="#" class="orders-table__view-link">Посмотреть</a></td>
+								<td class="orders-table__remove"><a href="#" data-toggle="modal" data-target="#deleteModal"  class="orders-table__remove-link"></a></td>
+							</tr>
+						</table>
+					</div>
+					<footer class="btn-more-block">
+						<a href="#" class="btn btn-secondary">Показать ещё</a>
+					</footer>
+				</div>
+			</main><!-- / car-rental -->
+		</div>
+		<section class="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<div class="newsletter__inner">
+							<h3 class="newsletter__title">Подпишитесь на новости</h3>
+							<form id="subscribe" action="#" class="newsletter__form">
+								<div class="newsletter__row">
+									<div class="newsletter__column-input">
+										<div class="newsletter__input-wrapper">
+											<div class="newsletter__input-wrapper__inner">
+												<label for="newsletter-email" class="newsletter__label">Введите ваш Email</label>
+												<input type="email" id="newsletter-email" name="newsletterEmail" class="newsletter__email" placeholder="Введите ваш Email" required>
+											</div>
+										</div>
+									</div>
+									<div class="newsletter__column-btn">
+										<button type="submit" class="newsletter__btn" aria-label="Отправить">
+											<i data-feather="arrow-right"></i>
+											<span class="newsletter__btn__text">Отправить</span>
+										</button>
+									</div>
+								</div>
+								<div class="newsletter__checkbox-wrapper">
+									<div class="newsletter__checkbox-wrapper__inner">
+									<input type="checkbox" id="newsletter-terms" name="newsletterTerms" class="newsletter__checkbox-input" required>
+									<label for="newsletter-terms" class="newsletter__checkbox-label">Согласен с условиями обработки персональных данных</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="seo">
+			<div class="container">
+				<div class="row">
+					<div class="column-1">
+						<h2 class="seo__title">Search Engine Optimization</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column-2">
+						<div class="seo__left">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+					<div class="column-2">
+						<div class="seo__right">
+							<p>SEO (Search Engine Optimization, поисковая оптимизация) – это всестороннее развитие и продвижение сайта для его выхода на первые позиции в результатах выдачи поисковых систем (SERPs) по выбранным запросам с целью увеличения посещаемости и дальнейшего получения дохода.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+				<footer class="footer">
+					<ul class="footer__menu">
+						<li class="footer__menu__item footer__menu__item_logo">
+							<a href="#" class="footer__menu__link">
+								<img src="images/logo.png" alt="Car Rental" class="footer__menu__logo">
+							</a>
+						</li>
+						<li class="footer__menu__item">
+							<a href="#" class="footer__menu__link">Акции</a>
+						</li>
+						<li class="footer__menu__item">
+							<a href="#" class="footer__menu__link">Трансфер</a>
+						</li>
+						<li class="footer__menu__item footer__menu__item_partners">
+							<a href="#" class="footer__menu__link">Партнерам</a>
+						</li>
+						<li class="footer__menu__item">
+							<a href="#" class="footer__menu__link">Правила</a>
+						</li>
+						<li class="footer__menu__item footer__menu__item_contacts">
+							<a href="#" class="footer__menu__link">Контакты</a>
+						</li>
+						<li class="footer__menu__item footer__menu__item_email">
+							<a href="#" class="footer__menu__link"><i data-feather="mail"></i><span class="footer__menu__text">Email Us</span></a>
+						</li>
+						<li class="footer__menu__item footer__menu__item_phone">
+							<a href="tel:+4917688093880" class="footer__menu__link"><i data-feather="phone"></i>+49 17688093880</a>
+						</li>
+					</ul>
+					<div class="footer__bottom">
+						<div class="footer__dev">
+							<a href="#" rel="nofollow noopener" target="_blank" class="footer__dev__link">
+								<img src="images/logo-meta.svg" alt="Meta" class="footer__dev__logo">
+							</a>
+							— Разработка сайта
+						</div>
+						<div class="footer__copyright">
+							SEO (Search Engine Optimization
+						</div>
+						<ul class="footer__social">
+							<li class="footer__social__item">
+								<a href="#" rel="nofollow noopener" target="_blank" class="footer__social__link">
+									<i data-feather="facebook"></i>
+								</a>
+							</li>
+							<li class="footer__social__item">
+								<a href="#" rel="nofollow noopener" target="_blank" class="footer__social__link">
+									<i data-feather="youtube"></i>
+								</a>
+							</li>
+							<li class="footer__social__item">
+								<a href="#" rel="nofollow noopener" target="_blank" class="footer__social__link">
+									<i data-feather="twitter"></i>
+								</a>
+							</li>
+							<li class="footer__social__item">
+								<a href="#" rel="nofollow noopener" target="_blank" class="footer__social__link">
+									<i data-feather="instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</footer>
+	</div><!-- / wrapper -->
+
+	<div class="modal fade modal_show-close modal_signout" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="deleteModalLabel">Удалить</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i data-feather="x"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-text">
+						Вы уверены что хотите удалить безвозвратно?
+					</div>
+					<div class="modal-row">
+						<div class="modal-column-2">
+							<button type="button" class="cancel-btn" data-dismiss="modal">Отмена</button>
+						</div>
+						<div class="modal-column-2">
+							<button type="button" class="submit-btn">Удалить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script src="js/util.min.js"></script>
+		<script src="js/collapse.min.js"></script>
+		<script src="js/modal.min.js"></script>
+		<script src="js/dropdown.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/bootstrap-datepicker.min.js"></script>
+		<script src="js/bootstrap-datepicker.ru.min.js"></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+		<script src="js/tooltip.js"></script>
+		<script src="js/tab.js"></script>
+		<script src="js/collapse.js"></script>
+		<script src="js/jquery.steps.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCGGhVeib8rmJ10mY-P2gUMyNw7hs6FzIw"></script>
+		<script src="js/main.js"></script>
+</body>
+
+</html>

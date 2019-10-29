@@ -1858,7 +1858,12 @@ NEWSLETTER
 .newsletter__input-wrapper {
 	position: relative;
 }
-
+.newsletter__input-wrapper.has-error .newsletter__email{
+	border-color: #FF9494;
+}
+.newsletter__checkbox-wrapper.has-error .newsletter__checkbox-label:before{
+	border-color: #FF9494;
+}
 .newsletter__label {
 	position: absolute;
 	top: 0;
@@ -2362,6 +2367,7 @@ SEARCH
 			align-items: center;
 	-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .search__block {
@@ -2369,6 +2375,7 @@ SEARCH
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
 	margin: 0 0 10px;
 	padding: 0 0 10px;
+	flex: 1 1 auto;
 }
 
 .search__daterange {
@@ -2730,7 +2737,9 @@ SEARCH
 		-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 	}
-
+	.search__block_submit {
+		max-width: 166px;
+	}
 	.search__daterange {
 		-ms-flex-wrap: wrap;
 			flex-wrap: wrap;

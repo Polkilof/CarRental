@@ -366,6 +366,9 @@ textarea.form-control {
 	}
 }
 
+label.error{
+	display: none !important;
+}
 .range-date {
 	margin-bottom: 13px;
 	&__wrap {
@@ -382,9 +385,6 @@ textarea.form-control {
 			height: 16px;
 			background: url(../images/icons/calendar.svg) no-repeat 50% 50%;
 			background-size: 15px 15px;
-		}
-		label.error{
-			display: none !important;
 		}
 	}
 	&__prefix {
