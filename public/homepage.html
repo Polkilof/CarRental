@@ -49,14 +49,15 @@
 										<li class="header__menu__item header__menu__item_mail"><a href="#" class="header__menu__link"><i data-feather="mail"></i></a></li>
 										<li class="header__menu__item header__menu__item_phone"><a href="tel:+4917688093880" class="header__menu__link header__menu__link_phone"><i data-feather="phone"></i> +49 17688093880</a></li>
 										<li class="header__menu__item">
-											<div class="lang">
-												<label for="lang" class="lang__label">Язык сайта</label>
-												<select name="lang" id="lang">
-													<option value="Русский">Русский</option>
-													<option value="English">English</option>
-												</select>
+											<div class="dropdown lang-switcher">
+												<button class="dropdown-toggle" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													Рус <i data-feather="chevron-down"></i>
+												</button>
+												<div class="dropdown-menu" aria-labelledby="dropdownLang">
+													<a class="dropdown-item dropdown-item_active" href="#">Русский</a>
+													<a class="dropdown-item" href="#">English</a>
+												</div>
 											</div>
-											
 										</li>
 										<li class="header__menu__item"><a href="#" class="header__menu__link header__menu__link_login" data-toggle="modal" data-target="#loginModal">Войти</a></li>
 									</ul>
@@ -732,7 +733,12 @@
 					</button>
 				</div>
 				<div class="modal-body">
+					
 					<form id="registration" action="#">
+						<div class="form-error">
+							Ошибка
+						</div>
+
 						<div class="text-input-wrapper">
 							<div class="text-input-wrapper__inner">
 								<label for="reg-1" class="text-input-label">Имя</label>
@@ -779,7 +785,11 @@
 							</li>
 							<li class="alt__list__item">
 								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
-									<i data-feather="youtube"></i>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather">
+										<g>
+											<path d="M21.84,12.23c0,5.71-3.91,9.77-9.68,9.77a10,10,0,0,1,0-20,9.64,9.64,0,0,1,6.71,2.62L16.15,7.23C12.58,3.8,6,6.38,6,12a6.26,6.26,0,0,0,6.2,6.31A5.41,5.41,0,0,0,17.84,14H12.16V10.56h9.52a9.1,9.1,0,0,1,.16,1.67Z"/>
+										</g>
+									</svg>
 								</a>
 							</li>
 							<li class="alt__list__item">
@@ -810,6 +820,10 @@
 				</div>
 				<div class="modal-body">
 					<form id="login" action="#">
+						<div class="form-error">
+							Ошибка
+						</div>
+						
 						<div class="text-input-wrapper">
 							<div class="text-input-wrapper__inner">
 								<label for="login-1" class="text-input-label">Email</label>
@@ -841,7 +855,11 @@
 							</li>
 							<li class="alt__list__item">
 								<a href="#" target="_blank" rel="nofollow noopener" class="alt__link">
-									<i data-feather="youtube"></i>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather">
+										<g>
+											<path d="M21.84,12.23c0,5.71-3.91,9.77-9.68,9.77a10,10,0,0,1,0-20,9.64,9.64,0,0,1,6.71,2.62L16.15,7.23C12.58,3.8,6,6.38,6,12a6.26,6.26,0,0,0,6.2,6.31A5.41,5.41,0,0,0,17.84,14H12.16V10.56h9.52a9.1,9.1,0,0,1,.16,1.67Z"/>
+										</g>
+									</svg>
 								</a>
 							</li>
 							<li class="alt__list__item">
@@ -930,7 +948,10 @@
 		<script src="js/tab.js"></script>
 		<script src="js/collapse.js"></script>
 		<script src="js/jquery.steps.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCGGhVeib8rmJ10mY-P2gUMyNw7hs6FzIw"></script>
+		<!--<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCGGhVeib8rmJ10mY-P2gUMyNw7hs6FzIw"></script>-->
+		<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEm69Fsg4kG8uc7nCHASZQUJb3Y5RJp4M&callback=initMap">
+	    </script>
 		<script src="js/main.js"></script>
 </body>
 

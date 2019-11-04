@@ -7,6 +7,7 @@
 			<main class="contact">
 				<div class="container">
 					<h1 class="h2 inner-page__title">Контакты</h1>
+					<div id="map" class="map"></div>
 					<div class="row contact__row">
 						<div class="col-lg-7">
 							<div class="contact__holder">
@@ -58,7 +59,6 @@
 							</div>
 						</div>
 					</div>
-					<div id="map" class="map"></div>
 				</div>
 			</main><!-- /  -->
 		</div>
@@ -147,6 +147,38 @@
 	grecaptcha.ready(function() {
 		grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'homepage' }).then(function(token) {});
 	});
+	</script>
+	<script>
+		function initMap() {
+			var mapPos = {lat: 38.741781, lng: -90.407596};
+			var contentString = '<div id="content">'+
+				'<div id="siteNotice">'+
+				'</div>'+
+				'<h3 id="firstHeading" class="firstHeading">Car Rental</h3>'+
+				'<div id="bodyContent">'+
+				'<p>11520 St Charles rock rd, ste 102B Bridgeton, MO 63044</p>'+
+				'</div>'+
+				'</div>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+				});
+			
+			var map = new google.maps.Map(
+				document.getElementById('map'), {zoom: 15, center: mapPos});
+			
+			var marker = new google.maps.Marker({
+				position: mapPos, 
+				map: map,
+				title: 'Car Rental'
+			});
+
+			infowindow.open(map, marker);
+
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		}
 	</script>
 	//= inc/_scripts.html
 </body>

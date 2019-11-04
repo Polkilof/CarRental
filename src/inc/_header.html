@@ -19,14 +19,15 @@
 							<li class="header__menu__item header__menu__item_mail"><a href="#" class="header__menu__link"><i data-feather="mail"></i></a></li>
 							<li class="header__menu__item header__menu__item_phone"><a href="tel:+4917688093880" class="header__menu__link header__menu__link_phone"><i data-feather="phone"></i> +49 17688093880</a></li>
 							<li class="header__menu__item">
-								<div class="lang">
-									<label for="lang" class="lang__label">Язык сайта</label>
-									<select name="lang" id="lang">
-										<option value="Русский">Русский</option>
-										<option value="English">English</option>
-									</select>
+								<div class="dropdown lang-switcher">
+									<button class="dropdown-toggle" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Рус <i data-feather="chevron-down"></i>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownLang">
+										<a class="dropdown-item dropdown-item_active" href="#">Русский</a>
+										<a class="dropdown-item" href="#">English</a>
+									</div>
 								</div>
-								
 							</li>
 							<li class="header__menu__item"><a href="#" class="header__menu__link header__menu__link_login" data-toggle="modal" data-target="#loginModal">Войти</a></li>
 						</ul>

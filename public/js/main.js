@@ -20,13 +20,13 @@ $(document).ready(function() {
 		return $state;
 	};
 
-	$('#lang').select2({
-		minimumResultsForSearch: Infinity,
-		theme: 'basic',
-		width: '50px',
-		dropdownParent: $('#lang').parent(),
-		templateSelection: formatLang,
-	});
+	// $('#lang').select2({
+	// 	minimumResultsForSearch: Infinity,
+	// 	theme: 'basic',
+	// 	width: '50px',
+	// 	dropdownParent: $('#lang').parent(),
+	// 	templateSelection: formatLang,
+	// });
 
 	$('.product-slider').slick({
 		arrows: false,
@@ -412,20 +412,37 @@ if ($('#login').length > 0) {
 	});
 }
 
-$(window).on('load resize', function() {
+// $(window).on('load resize', function() {
+// 	var $gallery = $('.similar-cars__slider');
+// 	if ($(window).width() < 767 && !$gallery.is('.slick-initialized')) {
+// 		$gallery.slick({
+// 			arrows: true,
+// 			dots: false,
+// 			slidesToShow: 1,
+// 			slidesToScroll: 1,
+// 			infinite: false,
+// 		});
+// 	} else if ($(window).width() > 768 && $gallery.is('.slick-initialized')) {
+// 		$gallery.slick('unslick');
+// 	}
+// });
+
 	var $gallery = $('.similar-cars__slider');
-	if ($(window).width() < 767 && !$gallery.is('.slick-initialized')) {
-		$gallery.slick({
-			arrows: true,
-			dots: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			infinite: false,
-		});
-	} else if ($(window).width() > 768 && $gallery.is('.slick-initialized')) {
-		$gallery.slick('unslick');
-	}
-});
+	$gallery.slick({
+		arrows: true,
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		mobileFirst: true,
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+			  slidesToShow: 2
+			}
+		  },
+		]
+	});
 
 feather.replace();
 
